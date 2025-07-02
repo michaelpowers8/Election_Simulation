@@ -1,0 +1,6 @@
+{
+    "Required_Keys":["Census_Data_File","Future_Year_Start","Future_Year_End"],
+    "Census_Data_File":"Census_Population_Estimate.csv",
+    "Future_Year_Start": 2025,
+    "Future_Year_End": 2028
+}
