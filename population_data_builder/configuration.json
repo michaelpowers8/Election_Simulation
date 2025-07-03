@@ -1,6 +1,7 @@
 {
-    "Required_Keys":["Census_Data_File","Future_Year_Start","Future_Year_End"],
+    "Required_Keys":["Census_Data_File","Future_Year_Start","Future_Year_End","Absolute_Working_Directory"],
     "Census_Data_File":"Census_Population_Estimate.csv",
     "Future_Year_Start": 2025,
-    "Future_Year_End": 2028
+    "Future_Year_End": 2028,
+    "Absolute_Working_Directory":"C:/Code/Election_Simulation/population_data_builder"
 }

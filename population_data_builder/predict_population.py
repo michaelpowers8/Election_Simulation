@@ -12,7 +12,7 @@ def get_census_data(configuration:dict[str,str|int],logger:XML_Logger) -> DataFr
         df_long['Year'] = df_long['Year'].astype(int)
         return df_long
     except Exception as e:
-        logger.log_to_xml(f"Error loading census data. Terminating program. Official error: {traceback.format_exc()}")
+        logger.log_to_xml(message=f"Error loading census data. Terminating program. Official error: {traceback.format_exc()}",status="ERROR",basepath=logger.base_dir)
         return None
 
 def _make_population_prediction(area:str,group:DataFrame,future_years:np.ndarray,logger:XML_Logger,model=LinearRegression()) -> DataFrame|None:
@@ -34,7 +34,7 @@ def _make_population_prediction(area:str,group:DataFrame,future_years:np.ndarray
             )
         return pred_df
     except Exception as e:
-        logger.log_to_xml(message=f"Failed to make population from {area} for {future_years}. Official error: {traceback.format_exc()}",status="ERROR")
+        logger.log_to_xml(message=f"Failed to make population from {area} for {future_years}. Official error: {traceback.format_exc()}",status="ERROR",basepath=logger.base_dir)
         return None
 
 def predict_populations(df:DataFrame,future_years:np.ndarray,logger:XML_Logger) -> list[DataFrame]|None:
@@ -47,7 +47,7 @@ def predict_populations(df:DataFrame,future_years:np.ndarray,logger:XML_Logger) 
                 predictions.append(pred_df)
         return predictions
     except Exception as e:
-        logger.log_to_xml(f"Error predicting future populations. Official error: {traceback.format_exc()}")
+        logger.log_to_xml(message=f"Error predicting future populations. Official error: {traceback.format_exc()}",status="ERROR",basepath=logger.base_dir)
         return None
     
 def merge_historical_and_future_data(predictions:list[DataFrame],historical_pivot:DataFrame,logger:XML_Logger) -> DataFrame|None:
@@ -71,16 +71,15 @@ def merge_historical_and_future_data(predictions:list[DataFrame],historical_pivo
         final_df.reset_index(drop=True)
         return final_df
     except Exception as e:
-        logger.log_to_xml(f"Error merging historical data with predicted future data. Terminating program. Official error: {traceback.format_exc()}",status="CRITICAL")
+        logger.log_to_xml(f"Error merging historical data with predicted future data. Terminating program. Official error: {traceback.format_exc()}",status="CRITICAL",basepath=logger.base_dir)
         return None
 
 def main() -> None:
-    logger:XML_Logger = XML_Logger(log_file="predict_population",log_retention_days=7)
-    logger.log_to_xml(message=f"Being predicting future populations for all states",status="INFO")
-    configuration:dict[str,str|int]|None = load_configuration(logger=logger)
+    configuration:dict[str,str|int]|None = load_configuration()
     if configuration is None:
         return None
-    
+    logger:XML_Logger = XML_Logger(log_file="predict_population",log_retention_days=7,base_dir=configuration["Absolute_Working_Directory"])
+    logger.log_to_xml(message=f"Begin predicting future populations for all states",status="INFO",basepath=logger.base_dir)    
     df:DataFrame|None = get_census_data(configuration=configuration,logger=logger)
     if df is None:
         return None
@@ -96,7 +95,7 @@ def main() -> None:
         return None
     
     final_df.to_csv("Predicted_Population.csv",index=True)
-    logger.log_to_xml(f"Successfully predicted future populations for all states and saved to csv. Closing Program.",status="SUCCESS")
+    logger.log_to_xml(f"Successfully predicted future populations for all states and saved to csv. Closing Program.",status="SUCCESS",basepath=logger.base_dir)
     logger.save_variable_info(locals_dict=locals(),variable_save_path="predict_population_variables.json")
 
 if __name__ == "__main__":

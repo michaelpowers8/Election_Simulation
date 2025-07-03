@@ -1,0 +1,102 @@
+{
+    "schema":{
+        "fields":[
+            {
+                "name":"index",
+                "type":"integer"
+            },
+            {
+                "name":"Variable Name",
+                "type":"string"
+            },
+            {
+                "name":"Type",
+                "type":"string"
+            },
+            {
+                "name":"Hash",
+                "type":"string"
+            },
+            {
+                "name":"Size (bytes)",
+                "type":"integer"
+            }
+        ],
+        "primaryKey":[
+            "index"
+        ],
+        "pandas_version":"1.4.0"
+    },
+    "data":[
+        {
+            "index":0,
+            "Variable Name":"configuration",
+            "Type":"dict",
+            "Hash":"b957417a409bdb3fdb1e179fcf70d6941e86d786b7227d7ab309693de77eca07",
+            "Size (bytes)":272
+        },
+        {
+            "index":1,
+            "Variable Name":"logger",
+            "Type":"XML_Logger",
+            "Hash":"c4e9d351a9252b6ff0ddf274ea69ad8d163615a26d99a956491600d10b46fd1c",
+            "Size (bytes)":56
+        },
+        {
+            "index":2,
+            "Variable Name":"state_names",
+            "Type":"list",
+            "Hash":"70e96b4edbe1376ded1c0936f77410e6ea6124396ab0ccfebd75a383ab0b7880",
+            "Size (bytes)":504
+        },
+        {
+            "index":3,
+            "Variable Name":"voter_rolls_data",
+            "Type":"ndarray",
+            "Hash":"b54272d7a992d15b6865e4c67d7a2eebe95c978fa494da0677596fd2be9d98c8",
+            "Size (bytes)":128
+        },
+        {
+            "index":4,
+            "Variable Name":"past_election_results_data",
+            "Type":"ndarray",
+            "Hash":"9b6ed688eebbe8543a3610709cb651294986eaa1237e6b6f9672f2b783311251",
+            "Size (bytes)":128
+        },
+        {
+            "index":5,
+            "Variable Name":"future_population_data",
+            "Type":"ndarray",
+            "Hash":"4711de0a2dee509bf5df9e88ff4f24d985b67f33f239d98067148a5dcc7b7624",
+            "Size (bytes)":128
+        },
+        {
+            "index":6,
+            "Variable Name":"state",
+            "Type":"str",
+            "Hash":"1662c025f4b21eced72489169e21bc42c8bad65fd46a858f27c5e6bcaaef541f",
+            "Size (bytes)":56
+        },
+        {
+            "index":7,
+            "Variable Name":"state_voter_roll_data",
+            "Type":"ndarray",
+            "Hash":"923700832169f03f031023819c03edaa4aed51e4371d7e610e869e3f6a0b61d9",
+            "Size (bytes)":112
+        },
+        {
+            "index":8,
+            "Variable Name":"state_past_election_data",
+            "Type":"ndarray",
+            "Hash":"4a1b44676ff7e551058953fa16e018d6e99d0fda84a83b5f4041f12fa88ef79c",
+            "Size (bytes)":112
+        },
+        {
+            "index":9,
+            "Variable Name":"state_future_population_data",
+            "Type":"ndarray",
+            "Hash":"ed932e04046e6ab434e125b13705d396ff60d117012a9b53ab663af68dce018f",
+            "Size (bytes)":112
+        }
+    ]
+}

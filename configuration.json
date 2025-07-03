@@ -1,4 +1,14 @@
 {
-    "Voter_Rolls_Data_File_Path":"raw_data.csv",
-    "Past_Election_Results_Data_File_Path":"us_2024_election_results.csv"
+    "Required_Keys": [
+                        "Voter_Rolls_Data_File_Path",
+                        "Past_Election_Results_Data_File_Path",
+                        "Expected_Population_Data",
+                        "Absolute_Working_Directory",
+                        "Election_Year"
+                     ],
+    "Voter_Rolls_Data_File_Path":"voter_rolls_state_data.csv",
+    "Past_Election_Results_Data_File_Path":"us_2024_election_results.csv",
+    "Expected_Population_Data":"population_data_builder/Predicted_Population.csv",
+    "Absolute_Working_Directory":"C:/Code/Election_Simulation",
+    "Election_Year":2028
 }
