@@ -169,7 +169,7 @@ def process_state(state:str,state_voter_rolls_data:ndarray,state_past_election_r
         else:
             actual_independent_votes += 1
     total_votes:int = actual_republican_votes+actual_democratic_votes+actual_independent_votes
-    return {
+    results:dict = {
             "State":state,
             "Electoral Votes":electoral_votes[state],
             "Total Votes":f'{total_votes:,.0f}',
@@ -183,6 +183,11 @@ def process_state(state:str,state_voter_rolls_data:ndarray,state_past_election_r
             "Independents Percent":f'{(actual_independent_votes/total_votes)*100:,.4f}',
             "Independents Electoral Votes": electoral_votes[state] if actual_independent_votes == max([actual_republican_votes,actual_democratic_votes,actual_independent_votes]) else 0,
         }
+    complete_log_message:str = f'''Finished processing round {iteration_number} for {state} for election year {year}.\n''' 
+    for key,item in results.items():
+        complete_log_message += f'\t\t{key}: {item}\n'
+    logger.log_to_xml(message=complete_log_message,status="INFO",basepath=logger.base_dir)
+    return results
 
 def process_maine(cd_1:dict[str,Any],cd_2:dict[str,Any]):
     for key,item in cd_1.items():
