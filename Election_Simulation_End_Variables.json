@@ -109,28 +109,28 @@
             "index":11,
             "Variable Name":"election_cycle",
             "Type":"int",
-            "Hash":"4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+            "Hash":"ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
             "Size (bytes)":28
         },
         {
             "index":12,
             "Variable Name":"total_votes",
             "Type":"int",
-            "Hash":"0fb5b15685a0a6c8dcbec6b7391bf0f33619052bfe1344c6369971a4ae891e5a",
+            "Hash":"a3bba99ff42eae01f85659c7cddd5f8067129f023817a0c96549767fe529d241",
             "Size (bytes)":28
         },
         {
             "index":13,
             "Variable Name":"total_rep_votes",
             "Type":"int",
-            "Hash":"ae4dde5f056254e0ed4abc3eb9363ff314cc581bf5691298cd68ef179d0e0e75",
+            "Hash":"fb8c6f5c225a362edf21b3074d585448f59ffd598879b7d4388dba01c1289a1e",
             "Size (bytes)":28
         },
         {
             "index":14,
             "Variable Name":"total_dem_votes",
             "Type":"int",
-            "Hash":"8f5504e63fe0b8c04a69158888f748e5f10b0b455d7821d06a982d8fca166f97",
+            "Hash":"47f564774c056b21a2ee0d1e187c38f2b889e3c55e18599a1dc2a04f840ada86",
             "Size (bytes)":28
         },
         {
@@ -144,21 +144,21 @@
             "index":16,
             "Variable Name":"republican_popularity_loss_gain",
             "Type":"float",
-            "Hash":"4feb17b51b0a2631921721f45e2518f510b3c764c4d4a66b06d6a006acd81767",
+            "Hash":"54d192f8ce814f1c0e300b89a232fdc6ed27bf7fd2e62414ee729c778f7a1140",
             "Size (bytes)":24
         },
         {
             "index":17,
             "Variable Name":"democratic_popularity_loss_gain",
             "Type":"float",
-            "Hash":"c34b79fc7a0c82c3075fa2c30158235133c93bffdafb751bcfb26c75a0915b58",
+            "Hash":"b46cfb905fbdf2174b317d108265966bff325b85d0d3d491f94402c277b1a6c1",
             "Size (bytes)":24
         },
         {
             "index":18,
             "Variable Name":"independent_popularity_loss_gain",
             "Type":"float",
-            "Hash":"82eee5ff1b79005a85dd9c1a34ffc66e774529005621d4e3f781aa1a9e7c9efd",
+            "Hash":"fa819f2372dc62d6699413a02ccc969dcc5a3ed1753336fd087f259b1f4e87ba",
             "Size (bytes)":24
         },
         {
@@ -193,21 +193,21 @@
             "index":23,
             "Variable Name":"state_result",
             "Type":"dict",
-            "Hash":"54ccb19a8ef997156ee892bad35b781f88fad8b995419e6929af5b8eed279f2c",
+            "Hash":"0af2ac5070d858f5919bdde0f51221c56956d86e0e9a4c21cb7c1f4b60232e6d",
             "Size (bytes)":464
         },
         {
             "index":24,
             "Variable Name":"maine_result",
             "Type":"dict",
-            "Hash":"e8ae896276c3e187c7588fd8b241e653fb9525c22cf4bf9fbd98a55b94e4ab84",
+            "Hash":"ee6bdcf7c2d4f6878def4a5f3e5e7bb84ead247566173d89fd893ac7acdac0f1",
             "Size (bytes)":464
         },
         {
             "index":25,
             "Variable Name":"nebraska_result",
             "Type":"dict",
-            "Hash":"53a031bc92e01f66aa998063f9fb8a0fa80509c78a92e79a3292844a44c66985",
+            "Hash":"439287f0625fe84eff70a8f3190f9d2c095ddbd117a7e97ad3f27e67b3f4cadd",
             "Size (bytes)":464
         }
     ]
