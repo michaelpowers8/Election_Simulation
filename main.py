@@ -266,66 +266,108 @@ def main():
     if configuration is None:
         return None
     logger:XML_Logger = XML_Logger(log_file="Election_Simulation_Logger",log_retention_days=7,base_dir=configuration["Absolute_Working_Directory"])
+    
+    # Load data once at start
     state_names:list[str] = get_state_names(configuration=configuration,logger=logger)
     voter_rolls_data:ndarray|None = get_voter_rolls_data(configuration=configuration,logger=logger)
     past_election_results_data:ndarray|None = get_election_results_data(configuration=configuration,logger=logger)
     future_population_data:ndarray|None = get_future_population_data(configuration=configuration,logger=logger)
     future_population_data_columns:list[str]|None = get_future_population_data_columns(configuration=configuration,logger=logger)
+    
     if any(item is None for item in [state_names,voter_rolls_data,past_election_results_data,future_population_data,future_population_data_columns]):
         return None
     
-    all_national_data:list[DataFrame] = []
-    all_state_data:list[DataFrame] = []
-    simulation_data:list[dict[str,str]] = []
-    for election_cycle in range(1,101):
+    # Initialize output files with headers
+    with open("All_State_Raw_Results.csv", "w") as state_file, \
+         open("All_National_Results.csv", "w") as national_file:
+        
+        # Write headers
+        state_df = DataFrame(columns=[
+            "State", "Electoral Votes", "Total Votes", "Republicans Votes", 
+            "Republicans Percent", "Republican Electoral Votes", 
+            "Democrats Votes", "Democrats Percent", "Democrats Electoral Votes",
+            "Independents Votes", "Independents Percent", "Independents Electoral Votes"
+        ])
+        state_df.to_csv(state_file, index=False)
+        
+        national_df = DataFrame(columns=[
+            "Total Votes", "Republican Electoral Votes", "Republican Votes",
+            "Republican Percent", "Democrats Electoral Votes", "Democrats Votes",
+            "Democrats Percent", "Independents Electoral Votes", "Independents Votes",
+            "Independents Percent"
+        ])
+        national_df.to_csv(national_file, index=False)
+    
+    # Process each election cycle
+    for election_cycle in range(1, 101):
         total_votes:int = 0
         total_rep_votes:int = 0
         total_dem_votes:int = 0
         total_ind_votes:int = 0
         simulation_data:list[dict[str,str]] = []
-        for state,state_voter_roll_data,state_past_election_data,state_future_population_data in zip(state_names,voter_rolls_data,past_election_results_data,future_population_data):
-            simulation_data.append(process_state(
-                                                    state,
-                                                    state_voter_roll_data,
-                                                    state_past_election_data,
-                                                    state_future_population_data,
-                                                    configuration["Election_Year"],
-                                                    future_population_data_columns,
-                                                    logger,
-                                                    election_cycle
-                                                )
-                                            )
-            total_votes,total_rep_votes,total_dem_votes,total_ind_votes = update_total_vote_counts(total_votes,total_rep_votes,total_dem_votes,total_ind_votes,simulation_data[-1])
-            if(state == "Maine-CD-2"):
-                simulation_data.append(process_maine(simulation_data[-2].copy(),simulation_data[-1].copy()))
-            elif(state == "Nebraska-CD-3"):
-                simulation_data.append(process_nebraska(simulation_data[-3].copy(),simulation_data[-2].copy(),simulation_data[-1].copy()))
-        state_data:DataFrame = DataFrame(simulation_data)
-        all_state_data.append(state_data)
-        national_data:DataFrame = DataFrame(
-                                            {
-                                                "Total Votes":f'{total_votes:,.0f}', 
-                                                "Republican Electoral Votes":f'{state_data["Republican Electoral Votes"].sum():,.0f}', 
-                                                "Republican Votes":f'{total_rep_votes:,.0f}', 
-                                                "Republican Percent":f'{(total_rep_votes/total_votes)*100:,.4f}', 
-                                                "Democrats Electoral Votes":f'{state_data["Democrats Electoral Votes"].sum():,.0f}', 
-                                                "Democrats Votes":f'{total_dem_votes:,.0f}', 
-                                                "Democrats Percent":f'{(total_dem_votes/total_votes)*100:,.4f}', 
-                                                "Independents Electoral Votes":f'{state_data["Independents Electoral Votes"].sum():,.0f}',
-                                                "Independents Votes":f'{total_ind_votes:,.0f}', 
-                                                "Independents Percent":f'{(total_ind_votes/total_votes)*100:,.4f}'
-                                            }
-                                            ,index=[election_cycle]
-                                        )
-        all_national_data.append(national_data)
-        concat(all_state_data).to_csv("All_State_Raw_Results.csv")
-        concat(all_national_data).to_csv("All_National_Results.csv")
-        logger.save_variable_info(locals_dict=locals(),variable_save_path="Election_Simulation_End_Variables.json")
-    all_state_data_df:DataFrame = concat(all_state_data)
-    all_state_data_df.groupby("State").median().to_csv("Median_State_Results.csv")
-    all_state_data_df.groupby("State").mean().to_csv("Mean_State_Results.csv")
-
-    logger.save_variable_info(locals_dict=locals(),variable_save_path="Election_Simulation_End_Variables.json")
+        
+        # Process each state
+        for state, state_voter_roll_data, state_past_election_data, state_future_population_data in zip(
+            state_names, voter_rolls_data, past_election_results_data, future_population_data):
+            
+            state_result = process_state(
+                state,
+                state_voter_roll_data,
+                state_past_election_data,
+                state_future_population_data,
+                configuration["Election_Year"],
+                future_population_data_columns,
+                logger,
+                election_cycle
+            )
+            
+            simulation_data.append(state_result)
+            total_votes, total_rep_votes, total_dem_votes, total_ind_votes = update_total_vote_counts(
+                total_votes, total_rep_votes, total_dem_votes, total_ind_votes, state_result)
+            
+            # Handle special states
+            if state == "Maine-CD-2":
+                maine_result = process_maine(simulation_data[-2].copy(), simulation_data[-1].copy())
+                simulation_data.append(maine_result)
+            elif state == "Nebraska-CD-3":
+                nebraska_result = process_nebraska(simulation_data[-3].copy(), simulation_data[-2].copy(), simulation_data[-1].copy())
+                simulation_data.append(nebraska_result)
+        
+        # Write state data incrementally
+        state_data = DataFrame(simulation_data)
+        with open("All_State_Raw_Results.csv", "a") as state_file:
+            state_data.to_csv(state_file, header=False, index=False)
+        
+        # Calculate and write national data
+        national_data = DataFrame({
+            "Total Votes": [f'{total_votes:,.0f}'],
+            "Republican Electoral Votes": [f'{state_data["Republican Electoral Votes"].sum():,.0f}'],
+            "Republican Votes": [f'{total_rep_votes:,.0f}'],
+            "Republican Percent": [f'{(total_rep_votes/total_votes)*100:,.4f}'],
+            "Democrats Electoral Votes": [f'{state_data["Democrats Electoral Votes"].sum():,.0f}'],
+            "Democrats Votes": [f'{total_dem_votes:,.0f}'],
+            "Democrats Percent": [f'{(total_dem_votes/total_votes)*100:,.4f}'],
+            "Independents Electoral Votes": [f'{state_data["Independents Electoral Votes"].sum():,.0f}'],
+            "Independents Votes": [f'{total_ind_votes:,.0f}'],
+            "Independents Percent": [f'{(total_ind_votes/total_votes)*100:,.4f}']
+        })
+        
+        with open("All_National_Results.csv", "a") as national_file:
+            national_data.to_csv(national_file, header=False, index=False)
+        
+        # Clear memory between cycles
+        del simulation_data, state_data, national_data
+        
+        # Save variables periodically (every 10 cycles instead of every cycle)
+        if election_cycle % 10 == 0:
+            logger.save_variable_info(locals_dict=locals(), variable_save_path="Election_Simulation_End_Variables.json")
+    
+    # Calculate final aggregates
+    all_state_data = read_csv("All_State_Raw_Results.csv")
+    all_state_data.groupby("State").median().to_csv("Median_State_Results.csv")
+    all_state_data.groupby("State").mean().to_csv("Mean_State_Results.csv")
+    
+    logger.save_variable_info(locals_dict=locals(), variable_save_path="Election_Simulation_End_Variables.json")
 
 if __name__ == "__main__":
     main()
