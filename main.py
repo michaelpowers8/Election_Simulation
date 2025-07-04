@@ -298,6 +298,7 @@ def main():
                                                 "Independents Votes":f'{total_ind_votes:,.0f}', 
                                                 "Independents Percent":f'{(total_ind_votes/total_votes)*100:,.4f}'
                                             }
+                                            ,index=[election_cycle]
                                         )
         all_national_data.append(national_data)
         concat(all_state_data).to_csv("All_State_Raw_Results.csv")
