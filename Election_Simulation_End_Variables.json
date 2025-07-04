@@ -46,57 +46,148 @@
             "index":2,
             "Variable Name":"state_names",
             "Type":"list",
-            "Hash":"70e96b4edbe1376ded1c0936f77410e6ea6124396ab0ccfebd75a383ab0b7880",
-            "Size (bytes)":504
+            "Hash":"2cb791cbeb9bcf378d21a2773b5a5a0c520751e8d95c0c54026e8e9f29bc4f08",
+            "Size (bytes)":488
         },
         {
             "index":3,
             "Variable Name":"voter_rolls_data",
             "Type":"ndarray",
-            "Hash":"b54272d7a992d15b6865e4c67d7a2eebe95c978fa494da0677596fd2be9d98c8",
+            "Hash":"72ff6d8d269e5ea3a33877cc41a6a0a9877fd7e93e1871398f68130ac367443b",
             "Size (bytes)":128
         },
         {
             "index":4,
             "Variable Name":"past_election_results_data",
             "Type":"ndarray",
-            "Hash":"9b6ed688eebbe8543a3610709cb651294986eaa1237e6b6f9672f2b783311251",
+            "Hash":"b28ae44ce15fc6f1bc783c9e6ef83e0784ee2682220698e09acdec290a7d4ec2",
             "Size (bytes)":128
         },
         {
             "index":5,
             "Variable Name":"future_population_data",
             "Type":"ndarray",
-            "Hash":"4711de0a2dee509bf5df9e88ff4f24d985b67f33f239d98067148a5dcc7b7624",
+            "Hash":"452b547c10aa24ca64106107411cd7741e5c0d3ecb29d542ad48b2cf6acf6b38",
             "Size (bytes)":128
         },
         {
             "index":6,
-            "Variable Name":"state",
-            "Type":"str",
-            "Hash":"1662c025f4b21eced72489169e21bc42c8bad65fd46a858f27c5e6bcaaef541f",
-            "Size (bytes)":56
+            "Variable Name":"future_population_data_columns",
+            "Type":"list",
+            "Hash":"cc31ae2b016b3ca11a9fa0717f67dad861258b764ffa54ada96054399aff5e6a",
+            "Size (bytes)":136
         },
         {
             "index":7,
-            "Variable Name":"state_voter_roll_data",
-            "Type":"ndarray",
-            "Hash":"923700832169f03f031023819c03edaa4aed51e4371d7e610e869e3f6a0b61d9",
-            "Size (bytes)":112
+            "Variable Name":"state_file",
+            "Type":"TextIOWrapper",
+            "Hash":"02dd8c0849f698042cafef4d5f8211a1b2a0ab02508ebad97f78ef376a0431ac",
+            "Size (bytes)":208
         },
         {
             "index":8,
-            "Variable Name":"state_past_election_data",
-            "Type":"ndarray",
-            "Hash":"4a1b44676ff7e551058953fa16e018d6e99d0fda84a83b5f4041f12fa88ef79c",
-            "Size (bytes)":112
+            "Variable Name":"national_file",
+            "Type":"TextIOWrapper",
+            "Hash":"4ab8ea014f0153d1c9bbe9d6dbf3f8da1b0062835a7f6fc82f8ad4e143e7acdc",
+            "Size (bytes)":208
         },
         {
             "index":9,
+            "Variable Name":"state_df",
+            "Type":"DataFrame",
+            "Hash":"7e45205afaa8602846d0561bba5d061a70e913fdf8786bff6107ebd5e987be30",
+            "Size (bytes)":164
+        },
+        {
+            "index":10,
+            "Variable Name":"national_df",
+            "Type":"DataFrame",
+            "Hash":"d15563ecce792d695371ab41006e03ce3f944005c2362080b5f8ea30b0635901",
+            "Size (bytes)":164
+        },
+        {
+            "index":11,
+            "Variable Name":"election_cycle",
+            "Type":"int",
+            "Hash":"4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+            "Size (bytes)":28
+        },
+        {
+            "index":12,
+            "Variable Name":"total_votes",
+            "Type":"int",
+            "Hash":"cd72a5944c83b6ec1322d31036150738f3ee2e3b7c051330ace0a82944f93bce",
+            "Size (bytes)":28
+        },
+        {
+            "index":13,
+            "Variable Name":"total_rep_votes",
+            "Type":"int",
+            "Hash":"c5648bdc6d3fa3019071fe890e87410cde57cf95c705bf1ec541d9a81a5841a4",
+            "Size (bytes)":28
+        },
+        {
+            "index":14,
+            "Variable Name":"total_dem_votes",
+            "Type":"int",
+            "Hash":"803cee0edb9e9004ba2b59aa24497985fba1bb1011c5055a8a8ae31b9da8b9b9",
+            "Size (bytes)":28
+        },
+        {
+            "index":15,
+            "Variable Name":"total_ind_votes",
+            "Type":"int",
+            "Hash":"ef0ecb5d047fbf9a7d675d406222412c9d05e717b4c197a2231e88bd33f55c62",
+            "Size (bytes)":28
+        },
+        {
+            "index":16,
+            "Variable Name":"state",
+            "Type":"str",
+            "Hash":"dd44f496fada3dcb07169ef2aee0fa3ca54425483f77e3e1e21887c7d9e08297",
+            "Size (bytes)":56
+        },
+        {
+            "index":17,
+            "Variable Name":"state_voter_roll_data",
+            "Type":"ndarray",
+            "Hash":"85f5ebae5ffc3b9a6cbeaa33f81f8e05aca7d78ccc2ee61cc6d3a0f1ada6072e",
+            "Size (bytes)":112
+        },
+        {
+            "index":18,
+            "Variable Name":"state_past_election_data",
+            "Type":"ndarray",
+            "Hash":"7841494dc354e839e7591ee1809c5bfaa2535051e3afbc38627379ecf0f29004",
+            "Size (bytes)":112
+        },
+        {
+            "index":19,
             "Variable Name":"state_future_population_data",
             "Type":"ndarray",
-            "Hash":"ed932e04046e6ab434e125b13705d396ff60d117012a9b53ab663af68dce018f",
+            "Hash":"4c763b156a44142ac4af36f4d9483422a5f8bf15f54e2fc7b53c9db99ba84fc2",
             "Size (bytes)":112
+        },
+        {
+            "index":20,
+            "Variable Name":"state_result",
+            "Type":"dict",
+            "Hash":"1ab8b3e01c729bc71dcefac4b8531ccf0fb62f197cb627e52d45faf4a2b1b272",
+            "Size (bytes)":464
+        },
+        {
+            "index":21,
+            "Variable Name":"maine_result",
+            "Type":"dict",
+            "Hash":"3d054909e6ef848c93fdbf144d4ce3ce8271ccb2cf4386ed87523bb36039c8aa",
+            "Size (bytes)":464
+        },
+        {
+            "index":22,
+            "Variable Name":"nebraska_result",
+            "Type":"dict",
+            "Hash":"06645c80e9cf8afedced43167b77b9298ef33a7ee5ed4ea068b787a65165779a",
+            "Size (bytes)":464
         }
     ]
 }
