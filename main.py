@@ -116,18 +116,11 @@ def _verify_state_paramters(state:str,state_voter_rolls_data:ndarray,state_past_
 
 def _process_individual_vote(republican_vote_probability:float,democratic_vote_probability:float,independent_vote_probability:float) -> int:
     total:float = republican_vote_probability + democratic_vote_probability + independent_vote_probability
-    if(total < 1):
-        difference:float = 1 - total
-        republican_vote_probability += difference/3
-        democratic_vote_probability += difference/3
-        independent_vote_probability += difference/3
-    elif(total > 1):
-        difference:float = total - 1
-        republican_vote_probability -= difference/3
-        democratic_vote_probability -= difference/3
-        independent_vote_probability -= difference/3
     vote_cast:float = random.uniform(0,1)
-    if(random.random() > 0.98):
+    if((random.random() > total) and (total < 1)):
+        return -1 # No vote cast
+    
+    if((total > 1) and (random.random()*total*1.02 > total)):
         return -1 # No vote cast
 
     if(vote_cast < republican_vote_probability):
