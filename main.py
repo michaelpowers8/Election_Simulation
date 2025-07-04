@@ -131,7 +131,10 @@ def _process_individual_vote(republican_vote_probability:float,democratic_vote_p
     
     return 1 # Democratic vote
 
-def process_state(state:str,state_voter_rolls_data:ndarray,state_past_election_results:ndarray,future_population_data:ndarray,year:int,columns:list[str],logger:XML_Logger,iteration_number=1):
+def process_state(state:str,state_voter_rolls_data:ndarray,state_past_election_results:ndarray,
+                  future_population_data:ndarray,year:int,columns:list[str],logger:XML_Logger,
+                  iteration_number:int,republican_popularity_loss_gain:float,
+                  democratic_popularity_loss_gain:float,independent_popularity_loss_gain:float):
     """"""
     logger.log_to_xml(f'Begin processing round {iteration_number} for {state} for election year {year}.',status="INFO",basepath=logger.base_dir)
     if(not(_verify_state_paramters(state=state,state_voter_rolls_data=state_voter_rolls_data,state_past_election_results=state_past_election_results))):
@@ -146,26 +149,17 @@ def process_state(state:str,state_voter_rolls_data:ndarray,state_past_election_r
     registered_voters:int = round((state_voter_rolls_data[2]*random.uniform(0.98,1.02))*num_citizens)
     votes_to_cast:int = round(registered_voters*voter_turnout_percent)
 
-    past_republican_vote_percent:float = state_past_election_results[6]
-    past_republican_vote_percent_min:float = max(past_republican_vote_percent - random.uniform(0.01,0.1),0)
-    past_republican_vote_percent_max:float = past_republican_vote_percent + random.uniform(0.01,0.1)
+    republican_vote_percent:float = state_past_election_results[6]+republican_popularity_loss_gain
     actual_republican_votes:int = 0
 
-    past_democratic_vote_percent:float = state_past_election_results[3]
-    past_democratic_vote_percent_min:float = max(past_democratic_vote_percent - random.uniform(0.01,0.1),0)
-    past_democratic_vote_percent_max:float = past_republican_vote_percent + random.uniform(0.01,0.1)
+    democratic_vote_percent:float = state_past_election_results[3]+democratic_popularity_loss_gain
     actual_democratic_votes:int = 0
 
-    past_independent_vote_percent:float = state_past_election_results[9]
-    past_independent_vote_percent_min:float = max(past_independent_vote_percent - random.uniform(0.01,0.1),0)
-    past_independent_vote_percent_max:float = past_republican_vote_percent + random.uniform(0.01,0.1)
+    independent_vote_percent:float = state_past_election_results[9]+independent_popularity_loss_gain
     actual_independent_votes:int = 0
 
     for _ in range(votes_to_cast):
-        republican_vote_probability:float = random.uniform(past_republican_vote_percent_min,past_republican_vote_percent_max)
-        democratic_vote_probability:float = random.uniform(past_democratic_vote_percent_min,past_democratic_vote_percent_max)
-        independent_vote_probability:float = random.uniform(past_independent_vote_percent_min,past_independent_vote_percent_max)
-        vote_cast:int = _process_individual_vote(republican_vote_probability,democratic_vote_probability,independent_vote_probability)
+        vote_cast:int = _process_individual_vote(republican_vote_percent,democratic_vote_percent,independent_vote_percent)
         if vote_cast == -1:
             continue
         if vote_cast == 0:
@@ -298,6 +292,9 @@ def main():
         total_dem_votes:int = 0
         total_ind_votes:int = 0
         simulation_data:list[dict[str,str]] = []
+        republican_popularity_loss_gain:float = random.uniform(-0.1,0.1)
+        democratic_popularity_loss_gain:float = random.uniform(-0.1,0.1)
+        independent_popularity_loss_gain:float = random.uniform(-0.025,0.025)
         
         # Process each state
         for state, state_voter_roll_data, state_past_election_data, state_future_population_data in zip(
@@ -311,7 +308,10 @@ def main():
                 configuration["Election_Year"],
                 future_population_data_columns,
                 logger,
-                election_cycle
+                election_cycle,
+                republican_popularity_loss_gain,
+                democratic_popularity_loss_gain,
+                independent_popularity_loss_gain
             )
             
             simulation_data.append(state_result)
@@ -333,17 +333,17 @@ def main():
         
         # Calculate and write national data
         national_data = DataFrame({
-            "Total Votes": [f'{total_votes:,.0f}'],
-            "Republican Electoral Votes": [f'{state_data["Republican Electoral Votes"].sum():,.0f}'],
-            "Republican Votes": [f'{total_rep_votes:,.0f}'],
-            "Republican Percent": [f'{(total_rep_votes/total_votes)*100:,.4f}'],
-            "Democrats Electoral Votes": [f'{state_data["Democrats Electoral Votes"].sum():,.0f}'],
-            "Democrats Votes": [f'{total_dem_votes:,.0f}'],
-            "Democrats Percent": [f'{(total_dem_votes/total_votes)*100:,.4f}'],
-            "Independents Electoral Votes": [f'{state_data["Independents Electoral Votes"].sum():,.0f}'],
-            "Independents Votes": [f'{total_ind_votes:,.0f}'],
-            "Independents Percent": [f'{(total_ind_votes/total_votes)*100:,.4f}']
-        })
+                "Total Votes": [f'{total_votes:,.0f}'],
+                "Republican Electoral Votes": [f'{state_data["Republican Electoral Votes"].sum():,.0f}'],
+                "Republican Votes": [f'{total_rep_votes:,.0f}'],
+                "Republican Percent": [f'{(total_rep_votes/total_votes)*100:,.4f}'],
+                "Democrats Electoral Votes": [f'{state_data["Democrats Electoral Votes"].sum():,.0f}'],
+                "Democrats Votes": [f'{total_dem_votes:,.0f}'],
+                "Democrats Percent": [f'{(total_dem_votes/total_votes)*100:,.4f}'],
+                "Independents Electoral Votes": [f'{state_data["Independents Electoral Votes"].sum():,.0f}'],
+                "Independents Votes": [f'{total_ind_votes:,.0f}'],
+                "Independents Percent": [f'{(total_ind_votes/total_votes)*100:,.4f}']
+            })
         
         with open("All_National_Results.csv", "a") as national_file:
             national_data.to_csv(national_file, header=False, index=False)
@@ -352,7 +352,7 @@ def main():
         del simulation_data, state_data, national_data
         
         # Save variables periodically (every 10 cycles instead of every cycle)
-        if election_cycle % 10 == 0:
+        if election_cycle % 1 == 0:
             logger.save_variable_info(locals_dict=locals(), variable_save_path="Election_Simulation_End_Variables.json")
     
     # Calculate final aggregates
