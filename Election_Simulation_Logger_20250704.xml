@@ -1298,4 +1298,160 @@
 		Independents Votes: 384,601
 		Independents Percent: 8.2705
 		Independents Electoral Votes: 0
-</message></log><log timestamp="2025-07-04 15:55:06.761476" status="INFO"><message>Begin processing round 2 for Texas for election year 2028.</message></log></logs>
+</message></log><log timestamp="2025-07-04 15:55:06.761476" status="INFO"><message>Begin processing round 2 for Texas for election year 2028.</message></log><log timestamp="2025-07-04 15:55:15.803526" status="INFO"><message>Finished processing round 2 for Texas for election year 2028.
+		State: Texas
+		Electoral Votes: 40
+		Total Votes: 19,241,448
+		Republicans Votes: 10,322,837
+		Republicans Percent: 53.6490
+		Republican Electoral Votes: 40
+		Democrats Votes: 7,318,103
+		Democrats Percent: 38.0330
+		Democrats Electoral Votes: 0
+		Independents Votes: 1,600,508
+		Independents Percent: 8.3180
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 15:55:15.806213" status="INFO"><message>Begin processing round 2 for Utah for election year 2028.</message></log><log timestamp="2025-07-04 15:55:16.922414" status="INFO"><message>Finished processing round 2 for Utah for election year 2028.
+		State: Utah
+		Electoral Votes: 6
+		Total Votes: 2,451,983
+		Republicans Votes: 1,395,161
+		Republicans Percent: 56.8993
+		Republican Electoral Votes: 6
+		Democrats Votes: 817,760
+		Democrats Percent: 33.3510
+		Democrats Electoral Votes: 0
+		Independents Votes: 239,062
+		Independents Percent: 9.7497
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 15:55:16.925415" status="INFO"><message>Begin processing round 2 for Vermont for election year 2028.</message></log><log timestamp="2025-07-04 15:55:17.169539" status="INFO"><message>Finished processing round 2 for Vermont for election year 2028.
+		State: Vermont
+		Electoral Votes: 3
+		Total Votes: 428,589
+		Republicans Votes: 127,970
+		Republicans Percent: 29.8584
+		Republican Electoral Votes: 0
+		Democrats Votes: 254,798
+		Democrats Percent: 59.4504
+		Democrats Electoral Votes: 3
+		Independents Votes: 45,821
+		Independents Percent: 10.6911
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 15:55:17.171911" status="INFO"><message>Begin processing round 2 for Virginia for election year 2028.</message></log><log timestamp="2025-07-04 15:55:19.935555" status="INFO"><message>Finished processing round 2 for Virginia for election year 2028.
+		State: Virginia
+		Electoral Votes: 13
+		Total Votes: 6,260,130
+		Republicans Votes: 2,728,887
+		Republicans Percent: 43.5915
+		Republican Electoral Votes: 0
+		Democrats Votes: 2,965,517
+		Democrats Percent: 47.3715
+		Democrats Electoral Votes: 13
+		Independents Votes: 565,726
+		Independents Percent: 9.0370
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 15:55:19.937616" status="INFO"><message>Begin processing round 2 for Washington for election year 2028.</message></log><log timestamp="2025-07-04 15:55:22.726613" status="INFO"><message>Finished processing round 2 for Washington for election year 2028.
+		State: Washington
+		Electoral Votes: 12
+		Total Votes: 5,299,838
+		Republicans Votes: 1,935,030
+		Republicans Percent: 36.5111
+		Republican Electoral Votes: 0
+		Democrats Votes: 2,797,774
+		Democrats Percent: 52.7898
+		Democrats Electoral Votes: 12
+		Independents Votes: 567,034
+		Independents Percent: 10.6991
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 15:55:22.736855" status="INFO"><message>Begin processing round 2 for West Virginia for election year 2028.</message></log><log timestamp="2025-07-04 15:55:23.758320" status="INFO"><message>Finished processing round 2 for West Virginia for election year 2028.
+		State: West Virginia
+		Electoral Votes: 4
+		Total Votes: 1,090,975
+		Republicans Votes: 736,595
+		Republicans Percent: 67.5171
+		Republican Electoral Votes: 4
+		Democrats Votes: 258,635
+		Democrats Percent: 23.7068
+		Democrats Electoral Votes: 0
+		Independents Votes: 95,745
+		Independents Percent: 8.7761
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 15:55:23.763907" status="INFO"><message>Begin processing round 2 for Wisconsin for election year 2028.</message></log><log timestamp="2025-07-04 15:55:27.442142" status="INFO"><message>Finished processing round 2 for Wisconsin for election year 2028.
+		State: Wisconsin
+		Electoral Votes: 10
+		Total Votes: 3,947,792
+		Republicans Votes: 1,863,992
+		Republicans Percent: 47.2161
+		Republican Electoral Votes: 10
+		Democrats Votes: 1,752,918
+		Democrats Percent: 44.4025
+		Democrats Electoral Votes: 0
+		Independents Votes: 330,882
+		Independents Percent: 8.3814
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 15:55:27.445391" status="INFO"><message>Begin processing round 2 for Wyoming for election year 2028.</message></log><log timestamp="2025-07-04 15:55:27.745880" status="INFO"><message>Finished processing round 2 for Wyoming for election year 2028.
+		State: Wyoming
+		Electoral Votes: 3
+		Total Votes: 345,700
+		Republicans Votes: 238,330
+		Republicans Percent: 68.9413
+		Republican Electoral Votes: 3
+		Democrats Votes: 74,499
+		Democrats Percent: 21.5502
+		Democrats Electoral Votes: 0
+		Independents Votes: 32,871
+		Independents Percent: 9.5085
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 15:55:27.777681" status="INFO"><message>Begin processing round 3 for Alabama for election year 2028.</message></log><log timestamp="2025-07-04 15:55:30.568331" status="INFO"><message>Finished processing round 3 for Alabama for election year 2028.
+		State: Alabama
+		Electoral Votes: 9
+		Total Votes: 3,232,587
+		Republicans Votes: 2,330,671
+		Republicans Percent: 72.0993
+		Republican Electoral Votes: 9
+		Democrats Votes: 790,873
+		Democrats Percent: 24.4656
+		Democrats Electoral Votes: 0
+		Independents Votes: 111,043
+		Independents Percent: 3.4351
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 15:55:30.570700" status="INFO"><message>Begin processing round 3 for Alaska for election year 2028.</message></log><log timestamp="2025-07-04 15:55:31.003255" status="INFO"><message>Finished processing round 3 for Alaska for election year 2028.
+		State: Alaska
+		Electoral Votes: 3
+		Total Votes: 490,303
+		Republicans Votes: 304,848
+		Republicans Percent: 62.1754
+		Republican Electoral Votes: 3
+		Democrats Votes: 155,141
+		Democrats Percent: 31.6419
+		Democrats Electoral Votes: 0
+		Independents Votes: 30,314
+		Independents Percent: 6.1827
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 15:55:31.003255" status="INFO"><message>Begin processing round 3 for Arizona for election year 2028.</message></log><log timestamp="2025-07-04 15:55:35.147510" status="INFO"><message>Finished processing round 3 for Arizona for election year 2028.
+		State: Arizona
+		Electoral Votes: 11
+		Total Votes: 4,732,780
+		Republicans Votes: 2,830,476
+		Republicans Percent: 59.8058
+		Republican Electoral Votes: 11
+		Democrats Votes: 1,750,207
+		Democrats Percent: 36.9805
+		Democrats Electoral Votes: 0
+		Independents Votes: 152,097
+		Independents Percent: 3.2137
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 15:55:35.157320" status="INFO"><message>Begin processing round 3 for Arkansas for election year 2028.</message></log><log timestamp="2025-07-04 15:55:36.734213" status="INFO"><message>Finished processing round 3 for Arkansas for election year 2028.
+		State: Arkansas
+		Electoral Votes: 6
+		Total Votes: 1,708,728
+		Republicans Votes: 1,226,835
+		Republicans Percent: 71.7981
+		Republican Electoral Votes: 6
+		Democrats Votes: 407,625
+		Democrats Percent: 23.8555
+		Democrats Electoral Votes: 0
+		Independents Votes: 74,268
+		Independents Percent: 4.3464
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 15:55:36.744862" status="INFO"><message>Begin processing round 3 for California for election year 2028.</message></log></logs>
