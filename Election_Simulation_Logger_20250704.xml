@@ -4964,4 +4964,706 @@
 		Independents Votes: 84,973
 		Independents Percent: 4.6901
 		Independents Electoral Votes: 0
-</message></log><log timestamp="2025-07-04 16:11:53.575555" status="INFO"><message>Begin processing round 8 for California for election year 2028.</message></log></logs>
+</message></log><log timestamp="2025-07-04 16:11:53.575555" status="INFO"><message>Begin processing round 8 for California for election year 2028.</message></log><log timestamp="2025-07-04 16:12:10.843977" status="INFO"><message>Finished processing round 8 for California for election year 2028.
+		State: California
+		Electoral Votes: 54
+		Total Votes: 25,946,071
+		Republicans Votes: 10,201,061
+		Republicans Percent: 39.3164
+		Republican Electoral Votes: 0
+		Democrats Votes: 14,284,274
+		Democrats Percent: 55.0537
+		Democrats Electoral Votes: 54
+		Independents Votes: 1,460,736
+		Independents Percent: 5.6299
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:10.863334" status="INFO"><message>Begin processing round 8 for Colorado for election year 2028.</message></log><log timestamp="2025-07-04 16:12:14.718187" status="INFO"><message>Finished processing round 8 for Colorado for election year 2028.
+		State: Colorado
+		Electoral Votes: 10
+		Total Votes: 4,176,037
+		Republicans Votes: 1,844,309
+		Republicans Percent: 44.1641
+		Republican Electoral Votes: 0
+		Democrats Votes: 2,116,347
+		Democrats Percent: 50.6784
+		Democrats Electoral Votes: 10
+		Independents Votes: 215,381
+		Independents Percent: 5.1575
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:14.735006" status="INFO"><message>Begin processing round 8 for Connecticut for election year 2028.</message></log><log timestamp="2025-07-04 16:12:16.839983" status="INFO"><message>Finished processing round 8 for Connecticut for election year 2028.
+		State: Connecticut
+		Electoral Votes: 7
+		Total Votes: 2,448,799
+		Republicans Votes: 1,049,623
+		Republicans Percent: 42.8628
+		Republican Electoral Votes: 0
+		Democrats Votes: 1,297,336
+		Democrats Percent: 52.9785
+		Democrats Electoral Votes: 7
+		Independents Votes: 101,840
+		Independents Percent: 4.1588
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:16.858169" status="INFO"><message>Begin processing round 8 for Delaware for election year 2028.</message></log><log timestamp="2025-07-04 16:12:17.549594" status="INFO"><message>Finished processing round 8 for Delaware for election year 2028.
+		State: Delaware
+		Electoral Votes: 3
+		Total Votes: 783,385
+		Republicans Votes: 335,687
+		Republicans Percent: 42.8508
+		Republican Electoral Votes: 0
+		Democrats Votes: 417,013
+		Democrats Percent: 53.2322
+		Democrats Electoral Votes: 3
+		Independents Votes: 30,685
+		Independents Percent: 3.9170
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:17.565930" status="INFO"><message>Begin processing round 8 for District of Columbia for election year 2028.</message></log><log timestamp="2025-07-04 16:12:18.120061" status="INFO"><message>Finished processing round 8 for District of Columbia for election year 2028.
+		State: District of Columbia
+		Electoral Votes: 3
+		Total Votes: 577,863
+		Republicans Votes: 42,638
+		Republicans Percent: 7.3786
+		Republican Electoral Votes: 0
+		Democrats Votes: 502,341
+		Democrats Percent: 86.9308
+		Democrats Electoral Votes: 3
+		Independents Votes: 32,884
+		Independents Percent: 5.6906
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:18.136560" status="INFO"><message>Begin processing round 8 for Florida for election year 2028.</message></log><log timestamp="2025-07-04 16:12:24.824761" status="INFO"><message>Finished processing round 8 for Florida for election year 2028.
+		State: Florida
+		Electoral Votes: 30
+		Total Votes: 15,707,468
+		Republicans Votes: 8,967,865
+		Republicans Percent: 57.0930
+		Republican Electoral Votes: 30
+		Democrats Votes: 6,211,407
+		Democrats Percent: 39.5443
+		Democrats Electoral Votes: 0
+		Independents Votes: 528,196
+		Independents Percent: 3.3627
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:24.833022" status="INFO"><message>Begin processing round 8 for Georgia for election year 2028.</message></log><log timestamp="2025-07-04 16:12:29.027572" status="INFO"><message>Finished processing round 8 for Georgia for election year 2028.
+		State: Georgia
+		Electoral Votes: 16
+		Total Votes: 7,260,413
+		Republicans Votes: 3,752,420
+		Republicans Percent: 51.6833
+		Republican Electoral Votes: 16
+		Democrats Votes: 3,277,787
+		Democrats Percent: 45.1460
+		Democrats Electoral Votes: 0
+		Independents Votes: 230,206
+		Independents Percent: 3.1707
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:29.044201" status="INFO"><message>Begin processing round 8 for Hawaii for election year 2028.</message></log><log timestamp="2025-07-04 16:12:29.829695" status="INFO"><message>Finished processing round 8 for Hawaii for election year 2028.
+		State: Hawaii
+		Electoral Votes: 4
+		Total Votes: 880,357
+		Republicans Votes: 338,045
+		Republicans Percent: 38.3986
+		Republican Electoral Votes: 0
+		Democrats Votes: 503,532
+		Democrats Percent: 57.1963
+		Democrats Electoral Votes: 4
+		Independents Votes: 38,780
+		Independents Percent: 4.4050
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:29.847594" status="INFO"><message>Begin processing round 8 for Idaho for election year 2028.</message></log><log timestamp="2025-07-04 16:12:31.047550" status="INFO"><message>Finished processing round 8 for Idaho for election year 2028.
+		State: Idaho
+		Electoral Votes: 4
+		Total Votes: 1,403,676
+		Republicans Votes: 954,136
+		Republicans Percent: 67.9741
+		Republican Electoral Votes: 4
+		Democrats Votes: 377,335
+		Democrats Percent: 26.8819
+		Democrats Electoral Votes: 0
+		Independents Votes: 72,205
+		Independents Percent: 5.1440
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:31.074382" status="INFO"><message>Begin processing round 8 for Illinois for election year 2028.</message></log><log timestamp="2025-07-04 16:12:38.716719" status="INFO"><message>Finished processing round 8 for Illinois for election year 2028.
+		State: Illinois
+		Electoral Votes: 19
+		Total Votes: 8,786,308
+		Republicans Votes: 3,906,986
+		Republicans Percent: 44.4668
+		Republican Electoral Votes: 0
+		Democrats Votes: 4,475,299
+		Democrats Percent: 50.9349
+		Democrats Electoral Votes: 19
+		Independents Votes: 404,023
+		Independents Percent: 4.5983
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:38.735365" status="INFO"><message>Begin processing round 8 for Indiana for election year 2028.</message></log><log timestamp="2025-07-04 16:12:42.848771" status="INFO"><message>Finished processing round 8 for Indiana for election year 2028.
+		State: Indiana
+		Electoral Votes: 11
+		Total Votes: 4,791,301
+		Republicans Votes: 2,852,896
+		Republicans Percent: 59.5432
+		Republican Electoral Votes: 11
+		Democrats Votes: 1,735,441
+		Democrats Percent: 36.2207
+		Democrats Electoral Votes: 0
+		Independents Votes: 202,964
+		Independents Percent: 4.2361
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:42.869353" status="INFO"><message>Begin processing round 8 for Iowa for election year 2028.</message></log><log timestamp="2025-07-04 16:12:44.988903" status="INFO"><message>Finished processing round 8 for Iowa for election year 2028.
+		State: Iowa
+		Electoral Votes: 6
+		Total Votes: 2,458,319
+		Republicans Votes: 1,392,774
+		Republicans Percent: 56.6555
+		Republican Electoral Votes: 6
+		Democrats Votes: 962,219
+		Democrats Percent: 39.1413
+		Democrats Electoral Votes: 0
+		Independents Votes: 103,326
+		Independents Percent: 4.2031
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:45.007195" status="INFO"><message>Begin processing round 8 for Kansas for election year 2028.</message></log><log timestamp="2025-07-04 16:12:46.767839" status="INFO"><message>Finished processing round 8 for Kansas for election year 2028.
+		State: Kansas
+		Electoral Votes: 6
+		Total Votes: 2,037,577
+		Republicans Votes: 1,184,851
+		Republicans Percent: 58.1500
+		Republican Electoral Votes: 6
+		Democrats Votes: 766,593
+		Democrats Percent: 37.6228
+		Democrats Electoral Votes: 0
+		Independents Votes: 86,133
+		Independents Percent: 4.2272
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:46.786862" status="INFO"><message>Begin processing round 8 for Kentucky for election year 2028.</message></log><log timestamp="2025-07-04 16:12:49.516689" status="INFO"><message>Finished processing round 8 for Kentucky for election year 2028.
+		State: Kentucky
+		Electoral Votes: 8
+		Total Votes: 3,198,791
+		Republicans Votes: 2,094,259
+		Republicans Percent: 65.4703
+		Republican Electoral Votes: 8
+		Democrats Votes: 975,750
+		Democrats Percent: 30.5037
+		Democrats Electoral Votes: 0
+		Independents Votes: 128,782
+		Independents Percent: 4.0260
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:49.537412" status="INFO"><message>Begin processing round 8 for Louisiana for election year 2028.</message></log><log timestamp="2025-07-04 16:12:51.897967" status="INFO"><message>Finished processing round 8 for Louisiana for election year 2028.
+		State: Louisiana
+		Electoral Votes: 8
+		Total Votes: 2,646,800
+		Republicans Votes: 1,619,874
+		Republicans Percent: 61.2012
+		Republican Electoral Votes: 8
+		Democrats Votes: 921,156
+		Democrats Percent: 34.8026
+		Democrats Electoral Votes: 0
+		Independents Votes: 105,770
+		Independents Percent: 3.9961
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:51.913314" status="INFO"><message>Begin processing round 8 for Maine-CD-1 for election year 2028.</message></log><log timestamp="2025-07-04 16:12:52.410275" status="INFO"><message>Finished processing round 8 for Maine-CD-1 for election year 2028.
+		State: Maine-CD-1
+		Electoral Votes: 1
+		Total Votes: 560,674
+		Republicans Votes: 218,721
+		Republicans Percent: 39.0104
+		Republican Electoral Votes: 0
+		Democrats Votes: 316,110
+		Democrats Percent: 56.3804
+		Democrats Electoral Votes: 1
+		Independents Votes: 25,843
+		Independents Percent: 4.6093
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:52.426510" status="INFO"><message>Begin processing round 8 for Maine-CD-2 for election year 2028.</message></log><log timestamp="2025-07-04 16:12:52.842989" status="INFO"><message>Finished processing round 8 for Maine-CD-2 for election year 2028.
+		State: Maine-CD-2
+		Electoral Votes: 1
+		Total Votes: 461,210
+		Republicans Votes: 251,583
+		Republicans Percent: 54.5485
+		Republican Electoral Votes: 1
+		Democrats Votes: 189,205
+		Democrats Percent: 41.0236
+		Democrats Electoral Votes: 0
+		Independents Votes: 20,422
+		Independents Percent: 4.4279
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:52.864769" status="INFO"><message>Begin processing round 8 for Maryland for election year 2028.</message></log><log timestamp="2025-07-04 16:12:57.302748" status="INFO"><message>Finished processing round 8 for Maryland for election year 2028.
+		State: Maryland
+		Electoral Votes: 10
+		Total Votes: 4,835,199
+		Republicans Votes: 1,695,229
+		Republicans Percent: 35.0602
+		Republican Electoral Votes: 0
+		Democrats Votes: 2,861,685
+		Democrats Percent: 59.1844
+		Democrats Electoral Votes: 10
+		Independents Votes: 278,285
+		Independents Percent: 5.7554
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:12:57.323490" status="INFO"><message>Begin processing round 8 for Massachusetts for election year 2028.</message></log><log timestamp="2025-07-04 16:13:01.560494" status="INFO"><message>Finished processing round 8 for Massachusetts for election year 2028.
+		State: Massachusetts
+		Electoral Votes: 11
+		Total Votes: 4,789,811
+		Republicans Votes: 1,774,026
+		Republicans Percent: 37.0375
+		Republican Electoral Votes: 0
+		Democrats Votes: 2,766,850
+		Democrats Percent: 57.7653
+		Democrats Electoral Votes: 11
+		Independents Votes: 248,935
+		Independents Percent: 5.1972
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:01.581567" status="INFO"><message>Begin processing round 8 for Michigan for election year 2028.</message></log><log timestamp="2025-07-04 16:13:08.134044" status="INFO"><message>Finished processing round 8 for Michigan for election year 2028.
+		State: Michigan
+		Electoral Votes: 15
+		Total Votes: 7,574,757
+		Republicans Votes: 3,840,876
+		Republicans Percent: 50.7063
+		Republican Electoral Votes: 15
+		Democrats Votes: 3,399,869
+		Democrats Percent: 44.8842
+		Democrats Electoral Votes: 0
+		Independents Votes: 334,012
+		Independents Percent: 4.4095
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:08.152681" status="INFO"><message>Begin processing round 8 for Minnesota for election year 2028.</message></log><log timestamp="2025-07-04 16:13:12.108585" status="INFO"><message>Finished processing round 8 for Minnesota for election year 2028.
+		State: Minnesota
+		Electoral Votes: 10
+		Total Votes: 4,478,437
+		Republicans Votes: 2,135,604
+		Republicans Percent: 47.6864
+		Republican Electoral Votes: 10
+		Democrats Votes: 2,126,953
+		Democrats Percent: 47.4932
+		Democrats Electoral Votes: 0
+		Independents Votes: 215,880
+		Independents Percent: 4.8204
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:12.138955" status="INFO"><message>Begin processing round 8 for Mississippi for election year 2028.</message></log><log timestamp="2025-07-04 16:13:13.987339" status="INFO"><message>Finished processing round 8 for Mississippi for election year 2028.
+		State: Mississippi
+		Electoral Votes: 6
+		Total Votes: 2,094,163
+		Republicans Votes: 1,295,576
+		Republicans Percent: 61.8661
+		Republican Electoral Votes: 6
+		Democrats Votes: 723,974
+		Democrats Percent: 34.5710
+		Democrats Electoral Votes: 0
+		Independents Votes: 74,613
+		Independents Percent: 3.5629
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:14.026122" status="INFO"><message>Begin processing round 8 for Missouri for election year 2028.</message></log><log timestamp="2025-07-04 16:13:18.006584" status="INFO"><message>Finished processing round 8 for Missouri for election year 2028.
+		State: Missouri
+		Electoral Votes: 10
+		Total Votes: 4,260,065
+		Republicans Votes: 2,533,761
+		Republicans Percent: 59.4771
+		Republican Electoral Votes: 10
+		Democrats Votes: 1,561,187
+		Democrats Percent: 36.6470
+		Democrats Electoral Votes: 0
+		Independents Votes: 165,117
+		Independents Percent: 3.8759
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:18.046051" status="INFO"><message>Begin processing round 8 for Montana for election year 2028.</message></log><log timestamp="2025-07-04 16:13:18.780290" status="INFO"><message>Finished processing round 8 for Montana for election year 2028.
+		State: Montana
+		Electoral Votes: 4
+		Total Votes: 808,352
+		Republicans Votes: 480,476
+		Republicans Percent: 59.4390
+		Republican Electoral Votes: 4
+		Democrats Votes: 282,500
+		Democrats Percent: 34.9476
+		Democrats Electoral Votes: 0
+		Independents Votes: 45,376
+		Independents Percent: 5.6134
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:18.799667" status="INFO"><message>Begin processing round 8 for Nebraska-CD-1 for election year 2028.</message></log><log timestamp="2025-07-04 16:13:19.255463" status="INFO"><message>Finished processing round 8 for Nebraska-CD-1 for election year 2028.
+		State: Nebraska-CD-1
+		Electoral Votes: 1
+		Total Votes: 502,441
+		Republicans Votes: 285,386
+		Republicans Percent: 56.7999
+		Republican Electoral Votes: 1
+		Democrats Votes: 197,906
+		Democrats Percent: 39.3889
+		Democrats Electoral Votes: 0
+		Independents Votes: 19,149
+		Independents Percent: 3.8112
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:19.280092" status="INFO"><message>Begin processing round 8 for Nebraska-CD-2 for election year 2028.</message></log><log timestamp="2025-07-04 16:13:19.707981" status="INFO"><message>Finished processing round 8 for Nebraska-CD-2 for election year 2028.
+		State: Nebraska-CD-2
+		Electoral Votes: 1
+		Total Votes: 467,497
+		Republicans Votes: 224,440
+		Republicans Percent: 48.0089
+		Republican Electoral Votes: 0
+		Democrats Votes: 225,331
+		Democrats Percent: 48.1995
+		Democrats Electoral Votes: 1
+		Independents Votes: 17,726
+		Independents Percent: 3.7917
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:19.725273" status="INFO"><message>Begin processing round 8 for Nebraska-CD-3 for election year 2028.</message></log><log timestamp="2025-07-04 16:13:20.057446" status="INFO"><message>Finished processing round 8 for Nebraska-CD-3 for election year 2028.
+		State: Nebraska-CD-3
+		Electoral Votes: 1
+		Total Votes: 379,299
+		Republicans Votes: 293,006
+		Republicans Percent: 77.2493
+		Republican Electoral Votes: 1
+		Democrats Votes: 72,570
+		Democrats Percent: 19.1327
+		Democrats Electoral Votes: 0
+		Independents Votes: 13,723
+		Independents Percent: 3.6180
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:20.079174" status="INFO"><message>Begin processing round 8 for Nevada for election year 2028.</message></log><log timestamp="2025-07-04 16:13:21.944508" status="INFO"><message>Finished processing round 8 for Nevada for election year 2028.
+		State: Nevada
+		Electoral Votes: 6
+		Total Votes: 2,179,214
+		Republicans Votes: 1,124,611
+		Republicans Percent: 51.6063
+		Republican Electoral Votes: 6
+		Democrats Votes: 959,367
+		Democrats Percent: 44.0235
+		Democrats Electoral Votes: 0
+		Independents Votes: 95,236
+		Independents Percent: 4.3702
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:21.960448" status="INFO"><message>Begin processing round 8 for New Hampshire for election year 2028.</message></log><log timestamp="2025-07-04 16:13:22.956471" status="INFO"><message>Finished processing round 8 for New Hampshire for election year 2028.
+		State: New Hampshire
+		Electoral Votes: 4
+		Total Votes: 1,003,232
+		Republicans Votes: 489,885
+		Republicans Percent: 48.8307
+		Republican Electoral Votes: 4
+		Democrats Votes: 474,409
+		Democrats Percent: 47.2881
+		Democrats Electoral Votes: 0
+		Independents Votes: 38,938
+		Independents Percent: 3.8813
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:22.978671" status="INFO"><message>Begin processing round 8 for New Jersey for election year 2028.</message></log><log timestamp="2025-07-04 16:13:28.778447" status="INFO"><message>Finished processing round 8 for New Jersey for election year 2028.
+		State: New Jersey
+		Electoral Votes: 14
+		Total Votes: 6,705,402
+		Republicans Votes: 3,152,155
+		Republicans Percent: 47.0092
+		Republican Electoral Votes: 0
+		Democrats Votes: 3,257,785
+		Democrats Percent: 48.5845
+		Democrats Electoral Votes: 14
+		Independents Votes: 295,462
+		Independents Percent: 4.4063
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:28.797415" status="INFO"><message>Begin processing round 8 for New Mexico for election year 2028.</message></log><log timestamp="2025-07-04 16:13:30.078531" status="INFO"><message>Finished processing round 8 for New Mexico for election year 2028.
+		State: New Mexico
+		Electoral Votes: 5
+		Total Votes: 1,488,758
+		Republicans Votes: 697,553
+		Republicans Percent: 46.8547
+		Republican Electoral Votes: 0
+		Democrats Votes: 720,301
+		Democrats Percent: 48.3827
+		Democrats Electoral Votes: 5
+		Independents Votes: 70,904
+		Independents Percent: 4.7626
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:30.102210" status="INFO"><message>Begin processing round 8 for New York for election year 2028.</message></log><log timestamp="2025-07-04 16:13:39.991559" status="INFO"><message>Finished processing round 8 for New York for election year 2028.
+		State: New York
+		Electoral Votes: 28
+		Total Votes: 11,451,105
+		Republicans Votes: 5,072,647
+		Republicans Percent: 44.2983
+		Republican Electoral Votes: 0
+		Democrats Votes: 6,010,003
+		Democrats Percent: 52.4840
+		Democrats Electoral Votes: 28
+		Independents Votes: 368,455
+		Independents Percent: 3.2176
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:40.055350" status="INFO"><message>Begin processing round 8 for North Carolina for election year 2028.</message></log><log timestamp="2025-07-04 16:13:46.011548" status="INFO"><message>Finished processing round 8 for North Carolina for election year 2028.
+		State: North Carolina
+		Electoral Votes: 16
+		Total Votes: 7,002,444
+		Republicans Votes: 3,630,514
+		Republicans Percent: 51.8464
+		Republican Electoral Votes: 16
+		Democrats Votes: 3,096,309
+		Democrats Percent: 44.2175
+		Democrats Electoral Votes: 0
+		Independents Votes: 275,621
+		Independents Percent: 3.9361
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:46.031059" status="INFO"><message>Begin processing round 8 for North Dakota for election year 2028.</message></log><log timestamp="2025-07-04 16:13:46.525530" status="INFO"><message>Finished processing round 8 for North Dakota for election year 2028.
+		State: North Dakota
+		Electoral Votes: 3
+		Total Votes: 575,227
+		Republicans Votes: 391,161
+		Republicans Percent: 68.0012
+		Republican Electoral Votes: 3
+		Democrats Votes: 155,541
+		Democrats Percent: 27.0399
+		Democrats Electoral Votes: 0
+		Independents Votes: 28,525
+		Independents Percent: 4.9589
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:46.544572" status="INFO"><message>Begin processing round 8 for Ohio for election year 2028.</message></log><log timestamp="2025-07-04 16:13:53.692423" status="INFO"><message>Finished processing round 8 for Ohio for election year 2028.
+		State: Ohio
+		Electoral Votes: 17
+		Total Votes: 8,518,056
+		Republicans Votes: 4,781,353
+		Republicans Percent: 56.1320
+		Republican Electoral Votes: 17
+		Democrats Votes: 3,449,323
+		Democrats Percent: 40.4943
+		Democrats Electoral Votes: 0
+		Independents Votes: 287,380
+		Independents Percent: 3.3738
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:53.710463" status="INFO"><message>Begin processing round 8 for Oklahoma for election year 2028.</message></log><log timestamp="2025-07-04 16:13:55.968105" status="INFO"><message>Finished processing round 8 for Oklahoma for election year 2028.
+		State: Oklahoma
+		Electoral Votes: 7
+		Total Votes: 2,638,721
+		Republicans Votes: 1,772,354
+		Republicans Percent: 67.1672
+		Republican Electoral Votes: 7
+		Democrats Votes: 751,089
+		Democrats Percent: 28.4641
+		Democrats Electoral Votes: 0
+		Independents Votes: 115,278
+		Independents Percent: 4.3687
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:55.984631" status="INFO"><message>Begin processing round 8 for Oregon for election year 2028.</message></log><log timestamp="2025-07-04 16:13:58.705776" status="INFO"><message>Finished processing round 8 for Oregon for election year 2028.
+		State: Oregon
+		Electoral Votes: 8
+		Total Votes: 3,189,484
+		Republicans Votes: 1,338,295
+		Republicans Percent: 41.9596
+		Republican Electoral Votes: 0
+		Democrats Votes: 1,652,549
+		Democrats Percent: 51.8124
+		Democrats Electoral Votes: 8
+		Independents Votes: 198,640
+		Independents Percent: 6.2280
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:13:58.725291" status="INFO"><message>Begin processing round 8 for Pennsylvania for election year 2028.</message></log><log timestamp="2025-07-04 16:14:06.382932" status="INFO"><message>Finished processing round 8 for Pennsylvania for election year 2028.
+		State: Pennsylvania
+		Electoral Votes: 19
+		Total Votes: 8,845,324
+		Republicans Votes: 4,541,626
+		Republicans Percent: 51.3449
+		Republican Electoral Votes: 19
+		Democrats Votes: 4,002,372
+		Democrats Percent: 45.2484
+		Democrats Electoral Votes: 0
+		Independents Votes: 301,326
+		Independents Percent: 3.4066
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:06.401967" status="INFO"><message>Begin processing round 8 for Rhode Island for election year 2028.</message></log><log timestamp="2025-07-04 16:14:07.133271" status="INFO"><message>Finished processing round 8 for Rhode Island for election year 2028.
+		State: Rhode Island
+		Electoral Votes: 4
+		Total Votes: 823,999
+		Republicans Votes: 352,038
+		Republicans Percent: 42.7231
+		Republican Electoral Votes: 0
+		Democrats Votes: 429,664
+		Democrats Percent: 52.1438
+		Democrats Electoral Votes: 4
+		Independents Votes: 42,297
+		Independents Percent: 5.1331
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:07.152281" status="INFO"><message>Begin processing round 8 for South Carolina for election year 2028.</message></log><log timestamp="2025-07-04 16:14:10.434645" status="INFO"><message>Finished processing round 8 for South Carolina for election year 2028.
+		State: South Carolina
+		Electoral Votes: 9
+		Total Votes: 3,868,697
+		Republicans Votes: 2,292,390
+		Republicans Percent: 59.2548
+		Republican Electoral Votes: 9
+		Democrats Votes: 1,426,898
+		Democrats Percent: 36.8832
+		Democrats Electoral Votes: 0
+		Independents Votes: 149,409
+		Independents Percent: 3.8620
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:10.450788" status="INFO"><message>Begin processing round 8 for South Dakota for election year 2028.</message></log><log timestamp="2025-07-04 16:14:10.974204" status="INFO"><message>Finished processing round 8 for South Dakota for election year 2028.
+		State: South Dakota
+		Electoral Votes: 3
+		Total Votes: 616,587
+		Republicans Votes: 396,821
+		Republicans Percent: 64.3577
+		Republican Electoral Votes: 3
+		Democrats Votes: 190,201
+		Democrats Percent: 30.8474
+		Democrats Electoral Votes: 0
+		Independents Votes: 29,565
+		Independents Percent: 4.7949
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:10.994245" status="INFO"><message>Begin processing round 8 for Tennessee for election year 2028.</message></log><log timestamp="2025-07-04 16:14:15.136824" status="INFO"><message>Finished processing round 8 for Tennessee for election year 2028.
+		State: Tennessee
+		Electoral Votes: 11
+		Total Votes: 4,923,571
+		Republicans Votes: 3,208,642
+		Republicans Percent: 65.1690
+		Republican Electoral Votes: 11
+		Democrats Votes: 1,528,011
+		Democrats Percent: 31.0346
+		Democrats Electoral Votes: 0
+		Independents Votes: 186,918
+		Independents Percent: 3.7964
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:15.155993" status="INFO"><message>Begin processing round 8 for Texas for election year 2028.</message></log><log timestamp="2025-07-04 16:14:33.213309" status="INFO"><message>Finished processing round 8 for Texas for election year 2028.
+		State: Texas
+		Electoral Votes: 40
+		Total Votes: 21,206,436
+		Republicans Votes: 12,113,920
+		Republicans Percent: 57.1238
+		Republican Electoral Votes: 40
+		Democrats Votes: 8,278,056
+		Democrats Percent: 39.0356
+		Democrats Electoral Votes: 0
+		Independents Votes: 814,460
+		Independents Percent: 3.8406
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:33.231602" status="INFO"><message>Begin processing round 8 for Utah for election year 2028.</message></log><log timestamp="2025-07-04 16:14:35.418345" status="INFO"><message>Finished processing round 8 for Utah for election year 2028.
+		State: Utah
+		Electoral Votes: 6
+		Total Votes: 2,568,563
+		Republicans Votes: 1,550,674
+		Republicans Percent: 60.3713
+		Republican Electoral Votes: 6
+		Democrats Votes: 882,978
+		Democrats Percent: 34.3763
+		Democrats Electoral Votes: 0
+		Independents Votes: 134,911
+		Independents Percent: 5.2524
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:35.436064" status="INFO"><message>Begin processing round 8 for Vermont for election year 2028.</message></log><log timestamp="2025-07-04 16:14:35.857166" status="INFO"><message>Finished processing round 8 for Vermont for election year 2028.
+		State: Vermont
+		Electoral Votes: 3
+		Total Votes: 468,260
+		Republicans Votes: 155,856
+		Republicans Percent: 33.2841
+		Republican Electoral Votes: 0
+		Democrats Votes: 282,942
+		Democrats Percent: 60.4241
+		Democrats Electoral Votes: 3
+		Independents Votes: 29,462
+		Independents Percent: 6.2918
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:35.875736" status="INFO"><message>Begin processing round 8 for Virginia for election year 2028.</message></log><log timestamp="2025-07-04 16:14:41.561662" status="INFO"><message>Finished processing round 8 for Virginia for election year 2028.
+		State: Virginia
+		Electoral Votes: 13
+		Total Votes: 6,638,122
+		Republicans Votes: 3,121,541
+		Republicans Percent: 47.0245
+		Republican Electoral Votes: 0
+		Democrats Votes: 3,213,633
+		Democrats Percent: 48.4118
+		Democrats Electoral Votes: 13
+		Independents Votes: 302,948
+		Independents Percent: 4.5638
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:41.582111" status="INFO"><message>Begin processing round 8 for Washington for election year 2028.</message></log><log timestamp="2025-07-04 16:14:46.541693" status="INFO"><message>Finished processing round 8 for Washington for election year 2028.
+		State: Washington
+		Electoral Votes: 12
+		Total Votes: 5,786,741
+		Republicans Votes: 2,315,902
+		Republicans Percent: 40.0208
+		Republican Electoral Votes: 0
+		Democrats Votes: 3,111,570
+		Democrats Percent: 53.7707
+		Democrats Electoral Votes: 12
+		Independents Votes: 359,269
+		Independents Percent: 6.2085
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:46.561100" status="INFO"><message>Begin processing round 8 for West Virginia for election year 2028.</message></log><log timestamp="2025-07-04 16:14:47.508904" status="INFO"><message>Finished processing round 8 for West Virginia for election year 2028.
+		State: West Virginia
+		Electoral Votes: 4
+		Total Votes: 1,108,218
+		Republicans Votes: 786,390
+		Republicans Percent: 70.9599
+		Republican Electoral Votes: 4
+		Democrats Votes: 273,536
+		Democrats Percent: 24.6825
+		Democrats Electoral Votes: 0
+		Independents Votes: 48,292
+		Independents Percent: 4.3576
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:47.529116" status="INFO"><message>Begin processing round 8 for Wisconsin for election year 2028.</message></log><log timestamp="2025-07-04 16:14:51.278306" status="INFO"><message>Finished processing round 8 for Wisconsin for election year 2028.
+		State: Wisconsin
+		Electoral Votes: 10
+		Total Votes: 4,243,961
+		Republicans Votes: 2,153,787
+		Republicans Percent: 50.7495
+		Republican Electoral Votes: 10
+		Democrats Votes: 1,924,717
+		Democrats Percent: 45.3519
+		Democrats Electoral Votes: 0
+		Independents Votes: 165,457
+		Independents Percent: 3.8986
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:51.299508" status="INFO"><message>Begin processing round 8 for Wyoming for election year 2028.</message></log><log timestamp="2025-07-04 16:14:51.620119" status="INFO"><message>Finished processing round 8 for Wyoming for election year 2028.
+		State: Wyoming
+		Electoral Votes: 3
+		Total Votes: 356,208
+		Republicans Votes: 258,470
+		Republicans Percent: 72.5615
+		Republican Electoral Votes: 3
+		Democrats Votes: 79,926
+		Democrats Percent: 22.4380
+		Democrats Electoral Votes: 0
+		Independents Votes: 17,812
+		Independents Percent: 5.0004
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:51.660678" status="INFO"><message>Begin processing round 9 for Alabama for election year 2028.</message></log><log timestamp="2025-07-04 16:14:54.873592" status="INFO"><message>Finished processing round 9 for Alabama for election year 2028.
+		State: Alabama
+		Electoral Votes: 9
+		Total Votes: 3,131,029
+		Republicans Votes: 1,814,865
+		Republicans Percent: 57.9639
+		Republican Electoral Votes: 9
+		Democrats Votes: 1,316,164
+		Democrats Percent: 42.0361
+		Democrats Electoral Votes: 0
+		Independents Votes: 0
+		Independents Percent: 0.0000
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:54.893318" status="INFO"><message>Begin processing round 9 for Alaska for election year 2028.</message></log><log timestamp="2025-07-04 16:14:55.418368" status="INFO"><message>Finished processing round 9 for Alaska for election year 2028.
+		State: Alaska
+		Electoral Votes: 3
+		Total Votes: 504,938
+		Republicans Votes: 242,262
+		Republicans Percent: 47.9786
+		Republican Electoral Votes: 0
+		Democrats Votes: 258,934
+		Democrats Percent: 51.2804
+		Democrats Electoral Votes: 3
+		Independents Votes: 3,742
+		Independents Percent: 0.7411
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:14:55.437789" status="INFO"><message>Begin processing round 9 for Arizona for election year 2028.</message></log><log timestamp="2025-07-04 16:15:00.330172" status="INFO"><message>Finished processing round 9 for Arizona for election year 2028.
+		State: Arizona
+		Electoral Votes: 11
+		Total Votes: 4,701,797
+		Republicans Votes: 2,144,967
+		Republicans Percent: 45.6202
+		Republican Electoral Votes: 0
+		Democrats Votes: 2,556,830
+		Democrats Percent: 54.3798
+		Democrats Electoral Votes: 11
+		Independents Votes: 0
+		Independents Percent: 0.0000
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:15:00.349106" status="INFO"><message>Begin processing round 9 for Arkansas for election year 2028.</message></log><log timestamp="2025-07-04 16:15:02.186241" status="INFO"><message>Finished processing round 9 for Arkansas for election year 2028.
+		State: Arkansas
+		Electoral Votes: 6
+		Total Votes: 1,707,061
+		Republicans Votes: 983,524
+		Republicans Percent: 57.6150
+		Republican Electoral Votes: 6
+		Democrats Votes: 723,537
+		Democrats Percent: 42.3850
+		Democrats Electoral Votes: 0
+		Independents Votes: 0
+		Independents Percent: 0.0000
+		Independents Electoral Votes: 0
+</message></log><log timestamp="2025-07-04 16:15:02.207206" status="INFO"><message>Begin processing round 9 for California for election year 2028.</message></log></logs>
