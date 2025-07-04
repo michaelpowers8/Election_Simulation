@@ -116,7 +116,17 @@ def _verify_state_paramters(state:str,state_voter_rolls_data:ndarray,state_past_
 
 def _process_individual_vote(republican_vote_probability:float,democratic_vote_probability:float,independent_vote_probability:float) -> int:
     total:float = republican_vote_probability + democratic_vote_probability + independent_vote_probability
-    vote_cast:float = random.uniform(0,total)
+    if(total < 1):
+        difference:float = 1 - total
+        republican_vote_probability += difference/3
+        democratic_vote_probability += difference/3
+        independent_vote_probability += difference/3
+    elif(total > 1):
+        difference:float = total - 1
+        republican_vote_probability -= difference/3
+        democratic_vote_probability -= difference/3
+        independent_vote_probability -= difference/3
+    vote_cast:float = random.uniform(0,1)
     if(random.random() > 0.98):
         return -1 # No vote cast
 
@@ -144,18 +154,24 @@ def process_state(state:str,state_voter_rolls_data:ndarray,state_past_election_r
     votes_to_cast:int = round(registered_voters*voter_turnout_percent)
 
     past_republican_vote_percent:float = state_past_election_results[6]
+    past_republican_vote_percent_min:float = max(past_republican_vote_percent - random.uniform(0.01,0.1),0)
+    past_republican_vote_percent_max:float = past_republican_vote_percent + random.uniform(0.01,0.1)
     actual_republican_votes:int = 0
 
     past_democratic_vote_percent:float = state_past_election_results[3]
+    past_democratic_vote_percent_min:float = max(past_democratic_vote_percent - random.uniform(0.01,0.1),0)
+    past_democratic_vote_percent_max:float = past_republican_vote_percent + random.uniform(0.01,0.1)
     actual_democratic_votes:int = 0
 
     past_independent_vote_percent:float = state_past_election_results[9]
+    past_independent_vote_percent_min:float = max(past_independent_vote_percent - random.uniform(0.01,0.1),0)
+    past_independent_vote_percent_max:float = past_republican_vote_percent + random.uniform(0.01,0.1)
     actual_independent_votes:int = 0
 
     for _ in range(votes_to_cast):
-        republican_vote_probability:float = random.uniform(max(past_republican_vote_percent - random.uniform(0.01,0.1),0),past_republican_vote_percent + random.uniform(0.01,0.1))
-        democratic_vote_probability:float = random.uniform(max(past_democratic_vote_percent - random.uniform(0.01,0.1),0),past_democratic_vote_percent + random.uniform(0.01,0.1))
-        independent_vote_probability:float = random.uniform(max(past_independent_vote_percent - random.uniform(0.001,0.025),0),past_independent_vote_percent + random.uniform(0.001,0.025))
+        republican_vote_probability:float = random.uniform(past_republican_vote_percent_min,past_republican_vote_percent_max)
+        democratic_vote_probability:float = random.uniform(past_democratic_vote_percent_min,past_democratic_vote_percent_max)
+        independent_vote_probability:float = random.uniform(past_independent_vote_percent_min,past_independent_vote_percent_max)
         vote_cast:int = _process_individual_vote(republican_vote_probability,democratic_vote_probability,independent_vote_probability)
         if vote_cast == -1:
             continue
@@ -266,6 +282,7 @@ def main():
         total_rep_votes:int = 0
         total_dem_votes:int = 0
         total_ind_votes:int = 0
+        simulation_data:list[dict[str,str]] = []
         for state,state_voter_roll_data,state_past_election_data,state_future_population_data in zip(state_names,voter_rolls_data,past_election_results_data,future_population_data):
             simulation_data.append(process_state(
                                                     state,
@@ -303,6 +320,7 @@ def main():
         all_national_data.append(national_data)
         concat(all_state_data).to_csv("All_State_Raw_Results.csv")
         concat(all_national_data).to_csv("All_National_Results.csv")
+        logger.save_variable_info(locals_dict=locals(),variable_save_path="Election_Simulation_End_Variables.json")
     all_state_data_df:DataFrame = concat(all_state_data)
     all_state_data_df.groupby("State").median().to_csv("Median_State_Results.csv")
     all_state_data_df.groupby("State").mean().to_csv("Mean_State_Results.csv")
