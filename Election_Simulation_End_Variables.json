@@ -95,7 +95,7 @@
             "index":9,
             "Variable Name":"state_df",
             "Type":"DataFrame",
-            "Hash":"7e45205afaa8602846d0561bba5d061a70e913fdf8786bff6107ebd5e987be30",
+            "Hash":"fb7a35cdca01000d2a22957a981889e8efec14dc4094ab7fdc4959a879763eea",
             "Size (bytes)":164
         },
         {
@@ -109,56 +109,56 @@
             "index":11,
             "Variable Name":"election_cycle",
             "Type":"int",
-            "Hash":"6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918",
+            "Hash":"ad57366865126e55649ecb23ae1d48887544976efea46a48eb5d85a6eeb4d306",
             "Size (bytes)":28
         },
         {
             "index":12,
             "Variable Name":"total_votes",
             "Type":"int",
-            "Hash":"1723b442f60ff638441d72127f6bbebe0062902b8aba71d8ff0d46bb0dc02ac5",
+            "Hash":"15c1c83470e3171bbfa13472df74bc4317d4a3c10d2df177c9a5464df528ce98",
             "Size (bytes)":28
         },
         {
             "index":13,
             "Variable Name":"total_rep_votes",
             "Type":"int",
-            "Hash":"8e38786e9bf7a3d7b3126b1ecd18e6dc185cf533dd71bec49b949ae3d4aec382",
+            "Hash":"ffc571407e54912fb8ccb7d0f667b30b687a38f173859ad1218ae5050b3bc473",
             "Size (bytes)":28
         },
         {
             "index":14,
             "Variable Name":"total_dem_votes",
             "Type":"int",
-            "Hash":"7a6dc74dff96ff522a5c9d725bf83337b7a9cf4f8d82b63d980ced86cb8cb7c1",
+            "Hash":"7d7275663a1a99b3afc3e44815a0cd30ba123d8812fad1ff7db6d0d3ad5554a1",
             "Size (bytes)":28
         },
         {
             "index":15,
             "Variable Name":"total_ind_votes",
             "Type":"int",
-            "Hash":"3ab7018abac5c5797bbcd39dc0a3dac57c71203ba57c2f52b68699d0347f1b9d",
+            "Hash":"5149230238e62a1a03c68188757c2d9eb6212ad9e0cc437e1e9510ecc63c48d2",
             "Size (bytes)":28
         },
         {
             "index":16,
             "Variable Name":"republican_popularity_loss_gain",
             "Type":"float",
-            "Hash":"ce859c92990cfbbd03e3805cb76063247b3e7de0d7e871d7b5d46190b594d9f5",
+            "Hash":"9b5ee7bc4ec802eafb932ae54d6f160ab68aca182f103feb9bad3c07dc7418b0",
             "Size (bytes)":24
         },
         {
             "index":17,
             "Variable Name":"democratic_popularity_loss_gain",
             "Type":"float",
-            "Hash":"522759505f078db13a8f74896d8f5a7b24bd93a3129d4f8ab79622154832daa9",
+            "Hash":"6a23276ba7c22c9af1c1ae9e48b76610f68e4b385fa27a3c08509c154bfc659c",
             "Size (bytes)":24
         },
         {
             "index":18,
             "Variable Name":"independent_popularity_loss_gain",
             "Type":"float",
-            "Hash":"37a903b1ec0084ed404a43c02b9ca4ac7dc14309f9c67d7be40bfdfc3df85998",
+            "Hash":"06e9619924aa3eeb53951b8013ead7f1768b25aab96b64cd84d4bd92d8a23102",
             "Size (bytes)":24
         },
         {
@@ -193,22 +193,29 @@
             "index":23,
             "Variable Name":"state_result",
             "Type":"dict",
-            "Hash":"2df57a3c191843268f579c97260d82f6f6279a7f7a12b510bb813c10cf2d3f93",
+            "Hash":"81880362745cb5a150b9a70e156532c84d94ae79b404d9cbdfcbfdc7cda294b1",
             "Size (bytes)":464
         },
         {
             "index":24,
             "Variable Name":"maine_result",
             "Type":"dict",
-            "Hash":"e0bc429550192313f3c61b9a663f6c663ae14fd3437a89f0082403dd0bf24439",
+            "Hash":"3bbe79390908f2b4557e533abbd283ecf615f42080f197406891cd90283f077a",
             "Size (bytes)":464
         },
         {
             "index":25,
             "Variable Name":"nebraska_result",
             "Type":"dict",
-            "Hash":"0913b4e449783b08ce2529357bf4556d3e7254485bc79c1e92aa7b41e305324a",
+            "Hash":"9a6ebd03d4ea1e6c61bfa032e9a8ffe293abb6dd464ee2f8c45562862a4e0aa6",
             "Size (bytes)":464
+        },
+        {
+            "index":26,
+            "Variable Name":"all_state_data",
+            "Type":"DataFrame",
+            "Hash":"95842634575c90605549b173f561e1100b5c98e85fde7e1cef8d69ba81fd1e31",
+            "Size (bytes)":2145946
         }
     ]
 }

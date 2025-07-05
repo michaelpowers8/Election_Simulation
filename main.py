@@ -170,6 +170,7 @@ def process_state(state:str,state_voter_rolls_data:ndarray,state_past_election_r
             actual_independent_votes += 1
     total_votes:int = actual_republican_votes+actual_democratic_votes+actual_independent_votes
     results:dict = {
+            "Election Round":iteration_number,
             "State":state,
             "Electoral Votes":electoral_votes[state],
             "Total Votes":f'{total_votes:,.0f}',
@@ -275,7 +276,7 @@ def main():
         
         # Write headers
         state_df = DataFrame(columns=[
-            "State", "Electoral Votes", "Total Votes", "Republicans Votes", 
+            "Election Round","State", "Electoral Votes", "Total Votes", "Republicans Votes", 
             "Republicans Percent", "Republican Electoral Votes", 
             "Democrats Votes", "Democrats Percent", "Democrats Electoral Votes",
             "Independents Votes", "Independents Percent", "Independents Electoral Votes"
@@ -358,7 +359,13 @@ def main():
         
         # Save variables periodically (every 10 cycles instead of every cycle)
         if election_cycle % 1 == 0:
-            logger.save_variable_info(locals_dict=locals(), variable_save_path="Election_Simulation_End_Variables.json")
+            try:
+                logger.save_variable_info(locals_dict=locals(), variable_save_path="Election_Simulation_End_Variables.json")
+                all_state_data = read_csv("All_State_Raw_Results.csv")
+                all_state_data.groupby("State").median().to_csv("Median_State_Results.csv")
+                all_state_data.groupby("State").mean().to_csv("Mean_State_Results.csv")
+            except:
+                pass
     
     # Calculate final aggregates
     all_state_data = read_csv("All_State_Raw_Results.csv")
