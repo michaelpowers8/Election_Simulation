@@ -1,0 +1,36 @@
+<logs><log timestamp="2025-07-08 08:50:55.405203" status="ERROR"><message>Failed to get data from C:\Code\Election_Simulation\data\Combined_Data.csv. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 20, in get_csv
+    while((df is None)and(lines_to_skip &amp;lt; num_lines)):
+                          ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'num_lines' where it is not associated with a value
+</message></log><log timestamp="2025-07-08 08:51:40.630732" status="ERROR"><message>Failed to get data from C:\Code\Election_Simulation\data\Combined_Data.csv. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 21, in get_csv
+    while((df is None)and(lines_to_skip &amp;lt; num_lines)):
+                          ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'num_lines' where it is not associated with a value
+</message></log><log timestamp="2025-07-08 08:51:55.425430" status="ERROR"><message>Failed to get data from C:\Code\Election_Simulation\data\Combined_Data.csv. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 21, in get_csv
+    while((df is None)and(lines_to_skip &amp;lt; num_lines)):
+                          ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'num_lines' where it is not associated with a value
+</message></log><log timestamp="2025-07-08 08:51:59.607186" status="ERROR"><message>Failed to get data from C:\Code\Election_Simulation\data\Combined_Data.csv. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 21, in get_csv
+    while((df is None)and(lines_to_skip &amp;lt; num_lines)):
+                          ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'num_lines' where it is not associated with a value
+</message></log><log timestamp="2025-07-08 08:54:37.573402" status="ERROR"><message>Failed to get data from C:\Code\Election_Simulation\data\Combined_Data.csv. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 21, in get_csv
+    while((df is None)and(lines_to_skip &amp;lt; num_lines)):
+                          ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'num_lines' where it is not associated with a value
+</message></log><log timestamp="2025-07-08 08:55:20.761041" status="ERROR"><message>Failed to get data from C:\Code\Election_Simulation\data\Combined_Data.csv. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 21, in get_csv
+    while((df is None)and(lines_to_skip &amp;lt; num_lines)):
+                          ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'num_lines' where it is not associated with a value
+</message></log><log timestamp="2025-07-08 08:56:01.470598" status="ERROR"><message>Failed to get data from C:\Code\Election_Simulation\data\Combined_Data.csv. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 21, in get_csv
+    while((df is None)and(lines_to_skip &amp;lt; num_lines)):
+                          ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'num_lines' where it is not associated with a value
+</message></log></logs>

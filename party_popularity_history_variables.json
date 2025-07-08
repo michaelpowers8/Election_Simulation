@@ -32,29 +32,36 @@
             "index":0,
             "Variable Name":"logger",
             "Type":"XML_Logger",
-            "Hash":"355a2330bc7210f1519014cbd3cb2fdfa337ccab9d4fb71176eddf2692145873",
+            "Hash":"a5d6fc6e1c6d34709c561c0ec8e929c3bcd8ffd249f581cccd68e3df0b46701b",
             "Size (bytes)":56
         },
         {
             "index":1,
-            "Variable Name":"future_years",
-            "Type":"ndarray",
-            "Hash":"ed2831de8390a341bf8f8f35582709b25a2385ba4172778359af6523971d39ce",
-            "Size (bytes)":144
+            "Variable Name":"states",
+            "Type":"list",
+            "Hash":"45121b7fa03fc66c729bab31cfcb6d3a16817f94576f89fc15c18e6809bc7a46",
+            "Size (bytes)":472
         },
         {
             "index":2,
-            "Variable Name":"data",
-            "Type":"ndarray",
-            "Hash":"538a4142ecc05ab95b6e3109f70c5f2eb47cae806ded0bf42380efcd28faf7d4",
-            "Size (bytes)":168616
+            "Variable Name":"baseline_popularity",
+            "Type":"dict",
+            "Hash":"2f8493e633fb261d059226726cdab3662fd263277dab5748b4644ee22513afc2",
+            "Size (bytes)":1584
         },
         {
             "index":3,
-            "Variable Name":"df",
-            "Type":"DataFrame",
-            "Hash":"4604d3689bcb62b0db5245048099945a6efdecd4f9842acf947d099e58bb3ce8",
-            "Size (bytes)":72754
+            "Variable Name":"state",
+            "Type":"str",
+            "Hash":"2f934b37bf18abd13ee7fb522b20675d16c8ddeb27d3723f51c5b5573cee566b",
+            "Size (bytes)":56
+        },
+        {
+            "index":4,
+            "Variable Name":"past_results",
+            "Type":"list",
+            "Hash":"e75d3028e7204d343849987863d8fb8f6c54b80b0f8846ebdff7e9ae046840ab",
+            "Size (bytes)":184
         }
     ]
 }

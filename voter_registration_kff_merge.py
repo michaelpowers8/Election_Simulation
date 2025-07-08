@@ -1,12 +1,11 @@
 import os
 import re
-import sys
 import traceback
-from sklearn.linear_model import LinearRegression
-from numpy import array,ndarray,set_printoptions,arange
+from time import time
+from numpy import array,ndarray,arange
 from xml_logging import XML_Logger
 from pandas import DataFrame,read_csv,concat
-set_printoptions(sys.maxsize)
+from sklearn.linear_model import LinearRegression
 CURRENT_DIRECTORY:str = os.getcwd()
 
 def get_csv(file_name:str,logger:XML_Logger) -> DataFrame|None:
@@ -39,7 +38,7 @@ def get_all_csvs(data_folder:str,logger:XML_Logger) -> ndarray|None:
     try:
         dfs:list[DataFrame] = []
         for file in os.scandir(data_folder):
-            if file.is_file() and file.name.endswith('.csv'):
+            if file.is_file() and file.name.endswith('.csv') and not('Combine' in file.name):
                 df:DataFrame|None = get_csv(file_name=os.path.join(data_folder,file.name),logger=logger)
                 if df is not None:
                     dfs.append(df.iloc[1:-6])
@@ -83,36 +82,36 @@ def predict_future(states:dict[str,dict[str,list[int|float]]], future_years:list
 
 def convert_dict_to_data(states:dict[str,dict[str,list[int|float]]], logger:XML_Logger) -> ndarray|None:
     try:
-        new_data:list[list[str|float|int]] = []
-        dtype:list[tuple[str,str]] = [
+        # Define the dtype for our structured array
+        dtype = [
                 ('state', 'U50'),      # String (Unicode) for state names
-                ('num_registered_voters', 'i4'),      # Float for first numeric column
-                ('pct_registered_voters', 'f4'),       # Float for second numeric column
-                ('num_votes_cast', 'i4'),      # Float for third numeric column
-                ('pct_votes_cast', 'f4'),       # Float for fourth numeric column
-                ('year', 'i4')         # Integer for year
+                ('num_registered_voters', 'i8'),      # 64-bit integer
+                ('pct_registered_voters', 'f8'),      # 64-bit float
+                ('num_votes_cast', 'i8'),             # 64-bit integer
+                ('pct_votes_cast', 'f8'),             # 64-bit float
+                ('year', 'i4')                       # 32-bit integer
             ]
+        
+        # Create a list of tuples with the correct data types
+        data_tuples = []
         for state in states:
             for i, year in enumerate(states[state]['year']):
                 if i >= len(states[state]['num_registered_voters']):
                     break
-                new_row = [
+                data_tuples.append((
                         state,
-                        round(states[state]['num_registered_voters'][i]),
-                        round(states[state]['pct_registered_voters'][i], 3),
-                        round(states[state]['num_votes_cast'][i]),
-                        round(states[state]['pct_votes_cast'][i], 3),
-                        year
-                    ]
-                new_data.append(new_row)
+                        int(round(states[state]['num_registered_voters'][i]))*1000,
+                        float(round(states[state]['pct_registered_voters'][i], 3)),
+                        int(round(states[state]['num_votes_cast'][i]))*1000,
+                        float(round(states[state]['pct_votes_cast'][i], 3)),
+                        int(year)
+                    ))
+        
         # Sort the data by state and year
-        new_data_sorted = sorted(new_data, key=lambda x: (x[0], x[-1]))
-        print(array([tuple(row) for row in new_data_sorted]))
-        structured_array:ndarray = array(
-            [tuple(row) for row in new_data_sorted],
-            dtype=dtype
-        )
-        return structured_array
+        data_tuples_sorted = sorted(data_tuples, key=lambda x: (x[0], x[-1]))
+        
+        # Create and return the structured array
+        return array(data_tuples_sorted, dtype=dtype)
     except Exception as e:
         logger.log_to_xml(message=f"Failed to convert dictionary back to list. Official error: {traceback.format_exc()}",basepath=logger.base_dir,status="ERROR")
         return None
@@ -132,7 +131,10 @@ def main():
     data:ndarray|None = convert_dict_to_data(states=data,logger=logger)
     if data is None:
         return
+    df:DataFrame = DataFrame(data)
+    df.columns = ['State','Number of Registered Voters','Percent of Voters to Total Population', 'Number of Votes Cast', 'Percent of Votes Cast to Total Population', 'Year']
+    df.to_csv("data/Combined_Data.csv",index=False)
     logger.save_variable_info(locals_dict=locals(),variable_save_path=os.path.join(CURRENT_DIRECTORY,'voter_registration_kff_merge_variables.json'))
-    
 if __name__ == "__main__":
     main()
+    
