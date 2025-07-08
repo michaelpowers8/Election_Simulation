@@ -1,8 +1,10 @@
 import os
 import re
+import shutil
 import random
 import traceback
 import numpy as np
+from typing import Generator
 from datetime import datetime
 from xml_logging import XML_Logger
 from pandas import read_csv,DataFrame
@@ -148,14 +150,7 @@ class State_Election_Simulation:
                 "Independent Votes": [self.ind_votes],
                 "Independent Vote Percent": [self.ind_votes_pct]
             }
-        DataFrame(data).to_csv(
-                                "State_Results.csv", 
-                                mode="w" if self.round==1 and self.state=="Alabama" else "a", 
-                                encoding='utf-8', 
-                                index=False, 
-                                header=True if self.round==1 and self.state=="Alabama" else False,
-                                float_format='{:,.4f}'.format
-                               )
+        return data
 
 class Federal_Election_Simulation:
     def __init__(self,state_data:list[State_Election_Simulation],round:int,turnout:float):
@@ -261,25 +256,57 @@ def get_popularity_changes() -> list[float]:
 
     return [net_rep_change,net_dem_change,net_ind_change]
 
+def copy_simulated_data() -> None:
+    try:
+        if os.path.exists("State_Results - Copy.csv"):
+            os.remove("State_Results - Copy.csv")
+        shutil.copyfile("State_Results.csv","State_Results - Copy.csv")
+    except:
+        pass
+
+    try:
+        if os.path.exists("National_Results - Copy.csv"):
+            os.remove("National_Results - Copy.csv")
+        shutil.copyfile("National_Results.csv","National_Results - Copy.csv")
+    except:
+        pass
+
+def simulate_states(voter_data, party_popularity_data, changes, turnout, round) -> Generator[State_Election_Simulation, None, None]:
+    for state_voter_data, state_party_data in zip(voter_data, party_popularity_data):
+        state_sim = State_Election_Simulation(state_voter_data, state_party_data, changes, turnout, round)
+        state_sim.simulate_election()
+        yield state_sim
+
 def main():
     logger:XML_Logger = XML_Logger("simulator_logger","archive",log_retention_days=7,base_dir=CURRENT_DIRECTORY)
     voter_data:np.ndarray = get_voter_data(file_name="data/Combined_Data.csv",logger=logger,year=2028)
     party_popularity_data:np.ndarray = get_party_popularity_data(file_name="data/Baseline_Popularity.csv",logger=logger)
+    max_round:int = 1_000_000
 
-    for round in range(1,1_000_001):
-        logger.log_to_xml(message=f"Beginning election round {round}",basepath=logger.base_dir,status="INFO")
+    for round in range(1,max_round+1):
+        logger.log_to_xml(message=f"Beginning election round {round}/{max_round:,.0f}",basepath=logger.base_dir,status="INFO")
         print(f"Beginning election round {round} at {datetime.now()}")
-        state_elections:list[State_Election_Simulation] = []
+
         popularity_changes:list[float] = get_popularity_changes()
         turnout:float = random.uniform(0.6,0.9)
-        for state_voter_data,state_party_popularity_data in zip(voter_data,party_popularity_data):
-            state_simulation:State_Election_Simulation = State_Election_Simulation(state_voter_data,state_party_popularity_data,popularity_changes,turnout,round)
-            state_simulation.simulate_election()
-            state_simulation.save_to_csv()
-            state_elections.append(state_simulation)
+
+        state_elections = list(simulate_states(voter_data, party_popularity_data, popularity_changes, turnout, round))
+        state_results = [state_sim.save_to_csv() for state_sim in state_elections]
+        try:
+            DataFrame.from_records(state_results).to_csv(
+                                    "State_Results.csv", 
+                                    mode="w" if round==1 else "a", 
+                                    encoding='utf-8', 
+                                    index=False, 
+                                    header=True if round==1 else False,
+                                    float_format='{:,.4f}'.format
+                                )
+        except Exception as e:
+            logger.log_to_xml(message=f"Failed to save state results on round {round}. Official error: {traceback.format_exc()}",basepath=logger.base_dir,status="ERROR")
         federal_election:Federal_Election_Simulation = Federal_Election_Simulation(state_elections,round=round,turnout=turnout)
         federal_election.save_to_csv()
-        del state_elections
+        if round%25 == 0:
+            copy_simulated_data()
 
     logger.save_variable_info(locals_dict=locals(),variable_save_path=os.path.join(CURRENT_DIRECTORY,'simulator_variables.json'))
 
