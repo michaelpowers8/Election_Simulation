@@ -1,0 +1,237 @@
+<logs><log timestamp="2025-07-07 14:25:53.842122" status="ERROR"><message>Error getting all CSV data in data. Terminating program. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 13, in get_all_csvs
+    dfs.append(read_csv(os.path.join(data_folder,file.name)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\readers.py", line 626, in _read
+    return parser.read(nrows)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 1 fields in line 3, saw 5
+
+</message></log><log timestamp="2025-07-07 14:27:29.557899" status="ERROR"><message>Error getting all CSV data in data. Terminating program. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 13, in get_all_csvs
+    print(read_csv(os.path.join(data_folder,file.name)))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\readers.py", line 626, in _read
+    return parser.read(nrows)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 1 fields in line 3, saw 5
+
+</message></log><log timestamp="2025-07-07 14:30:22.587593" status="ERROR"><message>Error getting all CSV data in data. Terminating program. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 14, in get_all_csvs
+    dfs.append(read_csv(os.path.join(data_folder,file.name)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\readers.py", line 626, in _read
+    return parser.read(nrows)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 1 fields in line 3, saw 5
+
+</message></log><log timestamp="2025-07-07 14:31:50.303112" status="ERROR"><message>Error getting all CSV data in C:\Code\Election_Simulation\data. Terminating program. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 14, in get_all_csvs
+    dfs.append(read_csv(os.path.join(data_folder,file.name)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\readers.py", line 626, in _read
+    return parser.read(nrows)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 1 fields in line 3, saw 5
+
+</message></log><log timestamp="2025-07-07 14:43:40.101360" status="CRITICAL"><message>Error getting all CSV data in C:\Code\Election_Simulation\data. Terminating program. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 32, in get_all_csvs
+    df:DataFrame|None = get_csv(file_name=os.path.join(data_folder,file.name))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_csv() missing 1 required positional argument: 'logger'
+</message></log><log timestamp="2025-07-07 15:50:24.145055" status="ERROR"><message>Failed to convert data to dictionary. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 57, in convert_data_to_dict
+    states[current_state]['num_registered_voters'].append(float(row[1]) if isinstance(row[1], str) else row[1])
+                                                          ^^^^^^^^^^^^^
+ValueError: could not convert string to float: '2,499'
+</message></log><log timestamp="2025-07-07 15:51:36.727973" status="ERROR"><message>Failed to convert data to dictionary. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 59, in convert_data_to_dict
+    states[current_state]['num_registered_voters'].append(float(row[1]) if isinstance(row[1], str) else row[1])
+                                                          ^^^^^^^^^^^^^
+ValueError: could not convert string to float: '2,499'
+</message></log><log timestamp="2025-07-07 15:52:29.784843" status="ERROR"><message>Failed to convert data to dictionary. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 59, in convert_data_to_dict
+    states[current_state]['num_registered_voters'].append(float(row[1]) if isinstance(row[1], str) else row[1])
+                                                          ^^^^^^^^^^^^^
+ValueError: could not convert string to float: '2,499'
+</message></log><log timestamp="2025-07-07 16:10:17.143623" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 88, in convert_dict_to_data
+    for i, year in enumerate(states[state]['years']):
+                             ~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'years'
+</message></log><log timestamp="2025-07-07 16:11:30.198915" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 88, in convert_dict_to_data
+    for i, year in enumerate(states[state]['years']):
+                             ~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'years'
+</message></log><log timestamp="2025-07-07 16:12:12.332946" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 93, in convert_dict_to_data
+    round(states[state]['num_registered_voters'][i]),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+</message></log><log timestamp="2025-07-07 16:15:43.680943" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 93, in convert_dict_to_data
+    round(states[state]['num_registered_voters'][i]),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+</message></log><log timestamp="2025-07-07 16:16:14.307702" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 94, in convert_dict_to_data
+    round(states[state]['num_registered_voters'][i]),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+</message></log><log timestamp="2025-07-07 16:21:55.050481" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 94, in convert_dict_to_data
+    round(states[state]['num_registered_voters'][i]),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+</message></log><log timestamp="2025-07-07 16:22:22.111854" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 94, in convert_dict_to_data
+    round(states[state]['num_registered_voters'][i]),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+</message></log><log timestamp="2025-07-07 16:23:12.088394" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 94, in convert_dict_to_data
+    round(states[state]['num_registered_voters'][i]),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+</message></log><log timestamp="2025-07-07 16:24:37.004062" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 94, in convert_dict_to_data
+    round(states[state]['num_registered_voters'][i]),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+</message></log><log timestamp="2025-07-07 16:24:47.495173" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 94, in convert_dict_to_data
+    round(states[state]['num_registered_voters'][i]),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+</message></log><log timestamp="2025-07-07 16:30:01.534807" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 91, in convert_dict_to_data
+    round(states[state]['num_registered_voters'][i]),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+</message></log><log timestamp="2025-07-07 16:32:20.334266" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 89, in convert_dict_to_data
+    print(len(states[state]['num_registered_voters'][i]),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object of type 'float' has no len()
+</message></log><log timestamp="2025-07-07 16:32:48.367017" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 89, in convert_dict_to_data
+    print(len(states[state]['num_registered_voters'][i]),len(states[state]['pct_registered_voters'][i]),len(states[state]['num_votes_cast'][i]),len(states[state]['pct_votes_cast'][i]))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object of type 'float' has no len()
+</message></log><log timestamp="2025-07-07 16:33:29.666454" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 89, in convert_dict_to_data
+    print(f"{len(states[state]['num_registered_voters'][i])},{len(states[state]['pct_registered_voters'][i])},{len(states[state]['num_votes_cast'][i])},{len(states[state]['pct_votes_cast'][i])}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object of type 'float' has no len()
+</message></log><log timestamp="2025-07-07 16:33:53.916254" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 92, in convert_dict_to_data
+    round(states[state]['num_registered_voters'][i]),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+</message></log><log timestamp="2025-07-07 16:37:20.883202" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 93, in convert_dict_to_data
+    round(states[state]['num_registered_voters'][i]),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+</message></log><log timestamp="2025-07-07 16:48:05.489876" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 101, in convert_dict_to_data
+    return array(sorted(new_data, key=lambda x: (x[0], x[-1])),dtype=float)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'Alabama'
+</message></log><log timestamp="2025-07-07 17:03:59.871203" status="ERROR"><message>Failed to convert dictionary back to list. Official error: Traceback (most recent call last):
+  File "c:\Code\Election_Simulation\voter_registration_kff_merge.py", line 110, in convert_dict_to_data
+    print(array([tuple(row) for row in new_data_sorted],dtype=dtype))
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\arrayprint.py", line 1612, in _array_str_implementation
+    return array2string(a, max_line_width, precision, suppress_small, ' ', "")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\arrayprint.py", line 736, in array2string
+    return _array2string(a, options, separator, prefix)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\arrayprint.py", line 513, in wrapper
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\arrayprint.py", line 539, in _array2string
+    format_function = _get_format_function(data, **options)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\arrayprint.py", line 486, in _get_format_function
+    return StructuredVoidFormat.from_data(data, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\arrayprint.py", line 1386, in from_data
+    format_function = _get_format_function(data[field_name], **options)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\arrayprint.py", line 472, in _get_format_function
+    return formatdict['float']()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\arrayprint.py", line 411, in &amp;lt;lambda&amp;gt;
+    'float': lambda: FloatingFormat(
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\arrayprint.py", line 932, in __init__
+    self.fillFormat(data)
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\arrayprint.py", line 989, in fillFormat
+    int_part, frac_part = zip(*(s.split('.') for s in strs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\arrayprint.py", line 989, in &amp;lt;genexpr&amp;gt;
+    int_part, frac_part = zip(*(s.split('.') for s in strs))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mpowers\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\arrayprint.py", line 984, in &amp;lt;genexpr&amp;gt;
+    strs = (dragon4_positional(x, precision=self.precision,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to C long
+</message></log></logs>
