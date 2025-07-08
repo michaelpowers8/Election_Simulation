@@ -12,8 +12,8 @@ from electoral_votes import electoral_votes
 CURRENT_DIRECTORY:str = os.getcwd()
 
 class State_Election_Simulation:
-    def __init__(self,voter_data:np.ndarray,baseline_popularity_data:np.ndarray,popularity_changes:list[float],turnout:float,round:int):
-        self.round:int = round
+    def __init__(self,voter_data:np.ndarray,baseline_popularity_data:np.ndarray,popularity_changes:list[float],turnout:float,current_round:int):
+        self.current_round:int = current_round
         self.votes_to_cast:int = self._get_number_of_votes_to_cast(voter_data,turnout)
         self.total_votes:int = 0
         self.dem_popularity:float = baseline_popularity_data[2]+popularity_changes[1]
@@ -138,7 +138,7 @@ class State_Election_Simulation:
 
     def save_to_csv(self):
         data:dict[str,int|float] = {
-                "Round": [self.round],
+                "Round": [self.current_round],
                 "State": [self.state],
                 "Electoral Votes": [electoral_votes[self.state]],
                 "Winner": [self._get_winner()],
@@ -153,9 +153,9 @@ class State_Election_Simulation:
         return data
 
 class Federal_Election_Simulation:
-    def __init__(self,state_data:list[State_Election_Simulation],round:int,turnout:float):
+    def __init__(self,state_data:list[State_Election_Simulation],current_round:int,turnout:float):
         self.turnout:float = turnout
-        self.round:int = round
+        self.current_round:int = current_round
         self.total_votes:int = 0
         self.rep_votes:int = 0
         self.rep_electoral_votes:int = 0
@@ -192,7 +192,7 @@ class Federal_Election_Simulation:
 
     def save_to_csv(self):
         data:dict[str,int|float] = {
-                "Round": [self.round],
+                "Round": [self.current_round],
                 "Turnout Percent": [self.turnout],
                 "Total Votes": [self.total_votes],
                 "Republican Votes": [self.rep_votes],
@@ -207,10 +207,10 @@ class Federal_Election_Simulation:
             }
         DataFrame(data).to_csv(
                                 "National_Results.csv", 
-                                mode="w" if self.round==1 else "a", 
+                                mode="w" if self.current_round==1 else "a", 
                                 encoding='utf-8', 
                                 index=False, 
-                                header=True if self.round==1 else False,
+                                header=True if self.current_round==1 else False,
                                 float_format='{:,.4f}'.format
                                )
 
@@ -271,9 +271,9 @@ def copy_simulated_data() -> None:
     except:
         pass
 
-def simulate_states(voter_data, party_popularity_data, changes, turnout, round) -> Generator[State_Election_Simulation, None, None]:
+def simulate_states(voter_data, party_popularity_data, changes, turnout, current_round) -> Generator[State_Election_Simulation, None, None]:
     for state_voter_data, state_party_data in zip(voter_data, party_popularity_data):
-        state_sim = State_Election_Simulation(state_voter_data, state_party_data, changes, turnout, round)
+        state_sim = State_Election_Simulation(state_voter_data, state_party_data, changes, turnout, current_round)
         state_sim.simulate_election()
         yield state_sim
 
@@ -283,29 +283,29 @@ def main():
     party_popularity_data:np.ndarray = get_party_popularity_data(file_name="data/Baseline_Popularity.csv",logger=logger)
     max_round:int = 1_000_000
 
-    for round in range(1,max_round+1):
-        logger.log_to_xml(message=f"Beginning election round {round}/{max_round:,.0f}",basepath=logger.base_dir,status="INFO")
-        print(f"Beginning election round {round} at {datetime.now()}")
+    for current_round in range(1,max_round+1):
+        logger.log_to_xml(message=f"Beginning election round {current_round}/{max_round:,.0f}",basepath=logger.base_dir,status="INFO")
+        print(f"Beginning election round {current_round}/{max_round} at {datetime.now()}")
 
         popularity_changes:list[float] = get_popularity_changes()
         turnout:float = random.uniform(0.6,0.9)
 
-        state_elections = list(simulate_states(voter_data, party_popularity_data, popularity_changes, turnout, round))
+        state_elections = list(simulate_states(voter_data, party_popularity_data, popularity_changes, turnout, current_round))
         state_results = [state_sim.save_to_csv() for state_sim in state_elections]
         try:
             DataFrame.from_records(state_results).to_csv(
                                     "State_Results.csv", 
-                                    mode="w" if round==1 else "a", 
+                                    mode="w" if current_round==1 else "a", 
                                     encoding='utf-8', 
                                     index=False, 
-                                    header=True if round==1 else False,
+                                    header=True if current_round==1 else False,
                                     float_format='{:,.4f}'.format
                                 )
         except Exception as e:
-            logger.log_to_xml(message=f"Failed to save state results on round {round}. Official error: {traceback.format_exc()}",basepath=logger.base_dir,status="ERROR")
-        federal_election:Federal_Election_Simulation = Federal_Election_Simulation(state_elections,round=round,turnout=turnout)
+            logger.log_to_xml(message=f"Failed to save state results on round {current_round}. Official error: {traceback.format_exc()}",basepath=logger.base_dir,status="ERROR")
+        federal_election:Federal_Election_Simulation = Federal_Election_Simulation(state_elections,round=current_round,turnout=turnout)
         federal_election.save_to_csv()
-        if round%25 == 0:
+        if current_round%25 == 0:
             copy_simulated_data()
 
     logger.save_variable_info(locals_dict=locals(),variable_save_path=os.path.join(CURRENT_DIRECTORY,'simulator_variables.json'))
