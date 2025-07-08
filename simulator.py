@@ -265,11 +265,11 @@ def main():
     logger:XML_Logger = XML_Logger("simulator_logger","archive",log_retention_days=7,base_dir=CURRENT_DIRECTORY)
     voter_data:np.ndarray = get_voter_data(file_name="data/Combined_Data.csv",logger=logger,year=2028)
     party_popularity_data:np.ndarray = get_party_popularity_data(file_name="data/Baseline_Popularity.csv",logger=logger)
-    state_elections:list[State_Election_Simulation] = []
 
     for round in range(1,1_000_001):
         logger.log_to_xml(message=f"Beginning election round {round}",basepath=logger.base_dir,status="INFO")
         print(f"Beginning election round {round} at {datetime.now()}")
+        state_elections:list[State_Election_Simulation] = []
         popularity_changes:list[float] = get_popularity_changes()
         turnout:float = random.uniform(0.6,0.9)
         for state_voter_data,state_party_popularity_data in zip(voter_data,party_popularity_data):
@@ -279,7 +279,7 @@ def main():
             state_elections.append(state_simulation)
         federal_election:Federal_Election_Simulation = Federal_Election_Simulation(state_elections,round=round,turnout=turnout)
         federal_election.save_to_csv()
-        state_elections.clear()
+        del state_elections
 
     logger.save_variable_info(locals_dict=locals(),variable_save_path=os.path.join(CURRENT_DIRECTORY,'simulator_variables.json'))
 
