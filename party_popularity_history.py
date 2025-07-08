@@ -47,7 +47,7 @@ def past_election_results(state:str,logger:XML_Logger) -> list[list[int|float]]|
                 break
             if(not(recent_presidential_elections_found)):
                 continue
-            if(re.match(r"^[0-9]{4}$",line.strip())):
+            if(re.match(r"^[0-9]{4}$",line.strip()) and int(line.strip())>=2000):
                 if(len(past_results_row)>0):
                     past_results.append(past_results_row.copy())
                     past_results_row:list[int|float] = []

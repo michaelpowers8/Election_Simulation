@@ -46,7 +46,7 @@
             "index":2,
             "Variable Name":"baseline_popularity",
             "Type":"dict",
-            "Hash":"2f8493e633fb261d059226726cdab3662fd263277dab5748b4644ee22513afc2",
+            "Hash":"8565ea8fe8f079139d20aeecc4c7c8a9df5f8334d939446deb8cf7dd2403dff4",
             "Size (bytes)":1584
         },
         {
@@ -60,8 +60,8 @@
             "index":4,
             "Variable Name":"past_results",
             "Type":"list",
-            "Hash":"e75d3028e7204d343849987863d8fb8f6c54b80b0f8846ebdff7e9ae046840ab",
-            "Size (bytes)":184
+            "Hash":"85ecf516bd80b6a735972b59096499849951213817a6d6e9ef7c5bd20b0650fc",
+            "Size (bytes)":120
         }
     ]
 }
