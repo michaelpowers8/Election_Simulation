@@ -138,17 +138,17 @@ class State_Election_Simulation:
 
     def save_to_csv(self):
         data:dict[str,int|float] = {
-                "Round": [self.current_round],
-                "State": [self.state],
-                "Electoral Votes": [electoral_votes[self.state]],
-                "Winner": [self._get_winner()],
-                "Total Votes": [self.total_votes],
-                "Republican Votes": [self.rep_votes],
-                "Republican Vote Percent": [self.rep_votes_pct],
-                "Democrat Votes": [self.dem_votes],
-                "Democrat Vote Percent": [self.dem_votes_pct],
-                "Independent Votes": [self.ind_votes],
-                "Independent Vote Percent": [self.ind_votes_pct]
+                "Round": self.current_round,
+                "State": self.state,
+                "Electoral Votes": electoral_votes[self.state],
+                "Winner": self._get_winner(),
+                "Total Votes": self.total_votes,
+                "Republican Votes": self.rep_votes,
+                "Republican Vote Percent": self.rep_votes_pct,
+                "Democrat Votes": self.dem_votes,
+                "Democrat Vote Percent": self.dem_votes_pct,
+                "Independent Votes": self.ind_votes,
+                "Independent Vote Percent": self.ind_votes_pct
             }
         return data
 
@@ -303,7 +303,7 @@ def main():
                                 )
         except Exception as e:
             logger.log_to_xml(message=f"Failed to save state results on round {current_round}. Official error: {traceback.format_exc()}",basepath=logger.base_dir,status="ERROR")
-        federal_election:Federal_Election_Simulation = Federal_Election_Simulation(state_elections,round=current_round,turnout=turnout)
+        federal_election:Federal_Election_Simulation = Federal_Election_Simulation(state_elections,current_round=current_round,turnout=turnout)
         federal_election.save_to_csv()
         if current_round%25 == 0:
             copy_simulated_data()
