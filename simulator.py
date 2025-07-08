@@ -284,8 +284,8 @@ def main():
     max_round:int = 1_000_000
 
     for current_round in range(1,max_round+1):
-        logger.log_to_xml(message=f"Beginning election round {current_round}/{max_round:,.0f}",basepath=logger.base_dir,status="INFO")
-        print(f"Beginning election round {current_round}/{max_round} at {datetime.now()}")
+        logger.log_to_xml(message=f"Beginning election round {current_round:,.0f}/{max_round:,.0f}",basepath=logger.base_dir,status="INFO")
+        print(f"Beginning election round {current_round:,.0f}/{max_round:,.0f} at {datetime.now()}")
 
         popularity_changes:list[float] = get_popularity_changes()
         turnout:float = random.uniform(0.6,0.9)
