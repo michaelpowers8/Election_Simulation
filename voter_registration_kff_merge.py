@@ -135,6 +135,7 @@ def main():
     df.columns = ['State','Number of Registered Voters','Percent of Voters to Total Population', 'Number of Votes Cast', 'Percent of Votes Cast to Total Population', 'Year']
     df.to_csv("data/Combined_Data.csv",index=False)
     logger.save_variable_info(locals_dict=locals(),variable_save_path=os.path.join(CURRENT_DIRECTORY,'voter_registration_kff_merge_variables.json'))
+
 if __name__ == "__main__":
     main()
     
